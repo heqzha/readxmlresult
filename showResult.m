@@ -25,14 +25,23 @@ for i = 0:DTSG_numOfNetwork-1
     DTSG_TTL(i+1) = str2double(DTSG(i+1).networkID.TTL);
     DTSG_Time(i+1) = DTSG_networkCreateTime(i+1)+DTSG_TTL(i+1);
 end
+
 figure(1);
 plot(DTSG_Time,DTSG_numOfNodesZOR,'m*','MarkerSize',10);
+xlabel('Time','FontSize',20,'FontWeight','bold');
+ylabel('Density','FontSize',20,'FontWeight','bold');
 figure(2);
 plot(DTSG_numOfNodesZOR,DTSG_Efficiency,'r*','MarkerSize',10);
+xlabel('Number of nodes in ZOR','FontSize',20,'FontWeight','bold');
+ylabel('Efficiency','FontSize',20,'FontWeight','bold');
 figure(3);
 plot(DTSG_numOfNodesZOR,DTSG_PDR,'b*','MarkerSize',10);
+xlabel('Number of nodes in ZOR','FontSize',20,'FontWeight','bold');
+ylabel('PDR','FontSize',20,'FontWeight','bold');
 figure(4);
 plot(DTSG_numOfNodesZOR,DTSG_Delay,'k*','MarkerSize',10);
+xlabel('Number of nodes in ZOR','FontSize',20,'FontWeight','bold');
+ylabel('Delay','FontSize',20,'FontWeight','bold');
 
 end
 %vehicle density  = DTSG_numOfNodesZOR/ZOR/length
