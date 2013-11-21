@@ -21,15 +21,7 @@ for i = 0:numOfNetwork-1
     Time(i+1) = networkCreateTime(i+1)+TTL(i+1);
 end
 
-if strcmp(name, 'DTSG')
-    figure(1);
-elseif strcmp(name, 'Flooding')
-    figure(2); 
-elseif strcmp(name, 'DRG')
-    figure(3);
-elseif strcmp(name, 'ROVER')
-    figure(4);
-end
+figure;
 
 subplot(2,2,1);
 plot(Time,numOfNodesZOR,'m*','MarkerSize',10);
@@ -48,14 +40,6 @@ plot(numOfNodesZOR,Delay,'k*','MarkerSize',10);
 xlabel('Number of nodes in ZOR','FontSize',16,'FontWeight','bold');
 ylabel('Delay','FontSize',16,'FontWeight','bold');
 
-if strcmp(name, 'DTSG')
-    suptitle('Protocol : DTSG');
-elseif strcmp(name, 'Flooding')
-    suptitle('Flooding');
-elseif strcmp(name, 'DRG')
-    suptitle('Protocol : DRG');
-elseif strcmp(name, 'ROVER')
-    suptitle('Protocol : ROVER');
-end
+suptitle(strcat('Protocl: ', name));
 
 end

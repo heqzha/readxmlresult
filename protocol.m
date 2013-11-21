@@ -1,15 +1,63 @@
-function [DTSG,Flooding,DRG]= protocol
+function [Dummy, Flooding, DRG,DTSG, ROVER]= protocol(usecase)
+global FOLDER_BENCHMARK;
+global FOLDER_VEHICLE_DENSITY;
+global FOLDER_ZOR_ZOF_LENGTH;
+global FOLDER_WIDTH_BETWEEN_BUILDING;
 
-Protocol_1 = 'DTSG_GCRS_v0.6.7_06_11_2013.xml';
-DTSG = parseXML(Protocol_1);
+global USECASE_BENCHMARK;
+global USECASE_VEHICLE_DENSITY_500;
+global USECASE_VEHICLE_DENSITY_1500;
+global USECASE_ZOR_ZOF_LENGTH_500;
+global USECASE_ZOR_ZOF_LENGTH_1500;
+global USECASE_WIDTH_BETWEEN_BUILDING_20;
+global USECASE_WIDTH_BETWEEN_BUILDING_60;
 
-Protocol_2 ='Flooding_GCRS_v0.6.7_05_11_2013.xml';
-Flooding = parseXML(Protocol_2);
+switch usecase
+    case USECASE_BENCHMARK
+        folder = fullfile(FOLDER_BENCHMARK);
+    case USECASE_VEHICLE_DENSITY_500
+        folder = fullfile(FOLDER_VEHICLE_DENSITY, '500');
+    case USECASE_VEHICLE_DENSITY_1500
+        folder = fullfile(FOLDER_VEHICLE_DENSITY, '1500');
+    case USECASE_ZOR_ZOF_LENGTH_500
+        folder = fullfile(FOLDER_ZOR_ZOF_LENGTH, '500');
+    case USECASE_ZOR_ZOF_LENGTH_1500
+        folder = fullfile(FOLDER_ZOR_ZOF_LENGTH, '1500');
+    case USECASE_WIDTH_BETWEEN_BUILDING_20
+        folder = fullfile(FOLDER_WIDTH_BETWEEN_BUILDING, '20');
+    case USECASE_WIDTH_BETWEEN_BUILDING_60
+        folder = fullfile(FOLDER_WIDTH_BETWEEN_BUILDING, '60');
+    otherwise
+        
+end
+     %drgFile = 'DRG.xml';
+     %DRG = parseXML(drgFile);
+     
+%      drgFile = 'DRG.xml';
+%      DRG = parseXML(fullfile(folder, drgFile));
+%      
+%      Dummy=0;
+%      Flooding=0;
+%      ROVER=0;
+%      DTSG=0;
 
-Protocol_3 = 'DRG.xml';
-DRG = parseXML(Protocol_3);
-
-% Protocol_4 = 'ROVER';
-% ROVER = parseXML(Protocol_4);
+if size(folder) > 0
+    dummyFile = 'Dummy.xml';
+    Dummy = parseXML(fullfile(FOLDER_BENCHMARK, dummyFile));
+    
+    floodingFile ='Flooding.xml';
+    Flooding = parseXML(fullfile(folder, floodingFile));
+    
+    drgFile = 'DRG.xml';
+    DRG = parseXML(fullfile(folder, drgFile));
+    
+    %roverFile = 'ROVER.xml';
+    %ROVER = parseXML(fullfile(folder, roverFile));
+    ROVER = 0;
+    
+    dtsgFile = 'DTSG.xml';
+    DTSG = parseXML(fullfile(folder, dtsgFile));
+    
+end
 
 end

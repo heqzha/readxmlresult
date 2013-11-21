@@ -12,7 +12,7 @@ if theNode.hasChildNodes
     roadBuilding = getElementData(theNode,'Road_Building_Density_Ratio');
     numberOfcrossRoads = getElementData(theNode,'Number_of_CrossRoads');
     numberOfpolygons = getElementData(theNode,'Number_of_Polygons');
-    numberOfVehicles = getElementData(theNode,'Number_of_Vehicles');
+    numberOfVehicles = getElementData(theNode,'Vehicle_In_City');
     theRange = getElementData(theNode,'The_Range_of_Transmission');
        
     numNetworkID = networkID.getLength;
