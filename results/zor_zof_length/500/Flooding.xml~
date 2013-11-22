@@ -7,7 +7,7 @@
     <Road_Building_Density_Ratio>0.0883385</Road_Building_Density_Ratio>
     <Number_of_CrossRoads>9</Number_of_CrossRoads>
     <Number_of_Polygons>9</Number_of_Polygons>
-    <Vehicle_In_City>400</Vehicle_In_City>
+    <Vehicle_In_City>0</Vehicle_In_City>
     <The_Range_of_Transmission>300</The_Range_of_Transmission>
     <Network_Identification_Number ID="0">
         <Network_Created_by>393</Network_Created_by>

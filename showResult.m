@@ -8,55 +8,20 @@ global USECASE_ZOR_ZOF_LENGTH_1500;
 global USECASE_WIDTH_BETWEEN_BUILDING_20;
 global USECASE_WIDTH_BETWEEN_BUILDING_60;
 
-[Dummy, Flooding, DRG,DTSG, ROVER] = protocol(USECASE_BENCHMARK);
-vd = vehicleDensity(Dummy);
-zorR = zorRange(Dummy);
-bdRatio = buildingRoadRatio(Dummy);
+[vdBM, zrBM, brdrBM, delayBM, pdrBM, eBM ] = getPerformMetrics(USECASE_BENCHMARK);
 
-[IdealDelay] = averageOneHopDelay(Dummy);
-[floodingDelay] = averageOneHopDelay(Flooding);
-[drgDelay] = averageOneHopDelay(DRG);
-[dtsgDelay] = averageOneHopDelay(DTSG);
-[roverDelay] = averageOneHopDelay(ROVER);
+%[vdVD500, zrVD500, brdrVD500, delayVD500, pdrVD500, eVD500 ] = getPerformMetrics(USECASE_VEHICLE_DENSITY_500);
+%[vdVD1500, zrVD1500, brdrVD1500, delayVD1500, pdrVD1500, eVD1500 ] = getPerformMetrics(USECASE_VEHICLE_DENSITY_1500);
 
-[IdealPDR] = averagePDR(Dummy);
-[floodingPDR] = averagePDR(Flooding);
-[drgPDR] = averagePDR(DRG);
-[dtsgPDR] = averagePDR(DTSG);
-[roverPDR] = averagePDR(ROVER);
+[vdZZL500, zrZZL500, brdrZZL500, delayZZL500, pdrZZL500, eZZL500 ] = getPerformMetrics(USECASE_ZOR_ZOF_LENGTH_500);
+%[vdZZL1500, zrZZL1500, brdrZZL1500, delayZZL1500, pdrZZL1500, eZZL1500 ] = getPerformMetrics(USECASE_ZOR_ZOF_LENGTH_1500);
+zrZZL = [zrZZL500, zrBM];
+delayZZL = [delayZZL500; delayBM];
+pdrZZL = [pdrZZL500; pdrBM];
+eZZL = [eZZL500; eBM];
+showNow(zrZZL, delayZZL, pdrZZL, eZZL, 'ZOR Range');
 
-comparisonSpeed = 1.0/IdealDelay;
-[floodingE] = efficiency(1.0/floodingDelay, comparisonSpeed, floodingPDR,IdealPDR);
-[drgE] = efficiency(1.0/drgDelay, comparisonSpeed, drgPDR,IdealPDR);
-[dtsgE] = efficiency(1.0/dtsgDelay, comparisonSpeed, dtsgPDR,IdealPDR);
-[roverE] = efficiency(1.0/roverDelay, comparisonSpeed, roverPDR,IdealPDR);
-
-%delay
-vds = [vd];
-zorRs = [zorR];
-bdRatios = [bdRatio];
-
-floodingDelays = [floodingDelay];
-drgDelays = [drgDelay];
-dtsgDelays = [dtsgDelay];
-roverDelays = [roverDelay];
-
-floodingPDRs = [floodingPDR];
-drgPDRs = [drgPDR];
-dtsgPDRs = [dtsgPDR];
-roverPDRs = [roverPDR];
-
-floodingEs = [floodingE];
-drgEs = [drgE];
-dtsgEs = [dtsgE];
-roverEs = [roverE];
-
-Delays = [floodingDelays; drgDelays; dtsgDelays; roverDelays];
-PDRs = [floodingPDRs; drgPDRs; dtsgPDRs; roverPDRs];
-Efficiencies = [floodingEs; drgEs; dtsgEs; roverEs];
-
-showNow(vds, Delays, PDRs, Efficiencies, 'Vehicle Density');
-showNow(zorRs, Delays, PDRs, Efficiencies, 'ZOR Range');
-showNow(bdRatios, Delays, PDRs, Efficiencies, 'Building/Road Density Ratio');
+%[vdWBB20, zrWBB20, brdrWBB20, delayWBB20, pdrWBB20, eWBB20 ] = getPerformMetrics(USECASE_WIDTH_BETWEEN_BUILDING_20);
+%[vdWBB60, zrWBB60, brdrWBB60, delayWBB60, pdrWBB60, eWBB60 ] = getPerformMetrics(USECASE_WIDTH_BETWEEN_BUILDING_60);
 
 end
