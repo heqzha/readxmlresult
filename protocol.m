@@ -30,16 +30,6 @@ switch usecase
     otherwise
         
 end
-     %drgFile = 'DRG.xml';
-     %DRG = parseXML(drgFile);
-     
-%      drgFile = 'DRG.xml';
-%      DRG = parseXML(fullfile(folder, drgFile));
-%      
-%      Dummy=0;
-%      Flooding=0;
-%      ROVER=0;
-%      DTSG=0;
 
 if size(folder) > 0
     dummyFile = 'Dummy.xml';
@@ -51,9 +41,9 @@ if size(folder) > 0
     drgFile = 'DRG.xml';
     DRG = parseXML(fullfile(folder, drgFile));
     
-    %roverFile = 'ROVER.xml';
-    %ROVER = parseXML(fullfile(folder, roverFile));
-    ROVER = 0;
+    roverFile = 'ROVER.xml';
+    ROVER = parseXML(fullfile(folder, roverFile));
+    %ROVER = 0;
     
     dtsgFile = 'DTSG.xml';
     DTSG = parseXML(fullfile(folder, dtsgFile));
