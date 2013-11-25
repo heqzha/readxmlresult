@@ -11,5 +11,6 @@
 % end
 
  function [ efficiency ] = efficiency(validNetworkRatio, delayE, pdr)
-     efficiency =  validNetworkRatio * delayE * pdr;
+     %efficiency =  validNetworkRatio * delayE * pdr;
+     efficiency =  delayE * pdr;
  end

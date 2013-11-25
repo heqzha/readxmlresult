@@ -1,8 +1,8 @@
 function showResult
 constants;
 global USECASE_BENCHMARK;
-global USECASE_VEHICLE_DENSITY_500;
-global USECASE_VEHICLE_DENSITY_1500;
+global USECASE_VEHICLE_DENSITY_50;
+global USECASE_VEHICLE_DENSITY_150;
 global USECASE_ZOR_ZOF_LENGTH_500;
 global USECASE_ZOR_ZOF_LENGTH_1500;
 global USECASE_WIDTH_BETWEEN_BUILDING_20;
@@ -10,8 +10,18 @@ global USECASE_WIDTH_BETWEEN_BUILDING_60;
 
 [vdBM, zrBM, brdrBM, delayBM, pdrBM, eBM ] = getPerformMetrics(USECASE_BENCHMARK);
 
-%[vdVD500, zrVD500, brdrVD500, delayVD500, pdrVD500, eVD500 ] = getPerformMetrics(USECASE_VEHICLE_DENSITY_500);
-%[vdVD1500, zrVD1500, brdrVD1500, delayVD1500, pdrVD1500, eVD1500 ] = getPerformMetrics(USECASE_VEHICLE_DENSITY_1500);
+[vdVD50, zrVD50, brdrVD50, delayVD50, pdrVD50, eVD50 ] = getPerformMetrics(USECASE_VEHICLE_DENSITY_50);
+[vdVD150, zrVD150, brdrVD150, delayVD150, pdrVD150, eVD150 ] = getPerformMetrics(USECASE_VEHICLE_DENSITY_150);
+vd = [vdVD50, vdBM, vdVD150];
+delayVD = [delayVD50; delayBM; delayVD150];
+pdrVD = [pdrVD50; pdrBM; pdrVD150];
+eVD = [eVD50; eBM; eVD150];
+showNow(vd, delayVD, pdrVD, eVD, 'Vehicle Density');
+%vd = [vdVD50, vdBM];
+%delayVD = [delayVD50; delayBM];
+%pdrVD = [pdrVD50; pdrBM];
+%eVD = [eVD50; eBM];
+%showNow(vd, delayVD, pdrVD, eVD, 'Vehicle Density');
 
 [vdZZL500, zrZZL500, brdrZZL500, delayZZL500, pdrZZL500, eZZL500 ] = getPerformMetrics(USECASE_ZOR_ZOF_LENGTH_500);
 [vdZZL1500, zrZZL1500, brdrZZL1500, delayZZL1500, pdrZZL1500, eZZL1500 ] = getPerformMetrics(USECASE_ZOR_ZOF_LENGTH_1500);
