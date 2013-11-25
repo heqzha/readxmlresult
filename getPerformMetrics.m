@@ -5,13 +5,19 @@ VehicleDensity = vehicleDensity(Flooding);
 ZORRange = zorRange(Flooding);
 BuildingRoadDensityRatio = buildingRoadRatio(Flooding);
 
-[IdealDelay] = averageOneHopDelay(Dummy);
+[idealValidNetworkRatio] = getValidNetworkRatio(Dummy);
+[floodingValidNetworkRatio] = getValidNetworkRatio(Flooding);
+[drgValidNetworkRatio] = getValidNetworkRatio(DRG);
+[dtsgValidNetworkRatio] = getValidNetworkRatio(DTSG);
+[roverValidNetworkRatio] = getValidNetworkRatio(ROVER);
+
+[idealDelay] = averageOneHopDelay(Dummy);
 [floodingDelay] = averageOneHopDelay(Flooding);
 [drgDelay] = averageOneHopDelay(DRG);
 [dtsgDelay] = averageOneHopDelay(DTSG);
 [roverDelay] = averageOneHopDelay(ROVER);
 
-[IdealPDR] = averagePDR(Dummy);
+[idealPDR] = averagePDR(Dummy);
 [floodingPDR] = averagePDR(Flooding);
 [drgPDR] = averagePDR(DRG);
 [dtsgPDR] = averagePDR(DTSG);
@@ -27,11 +33,21 @@ BuildingRoadDensityRatio = buildingRoadRatio(Flooding);
 [dtsgNumReceivedMsgNode] = averageNumReceivedMsgNode(DTSG);
 [roverNumReceivedMsgNode] = averageNumReceivedMsgNode(ROVER);
 
-[floodingFactor] = factor(floodingDelay, IdealDelay, floodingNumOfNode);
-[drgFactor] = factor(drgDelay, IdealDelay, drgNumOfNode);
-[dtsgFactor] = factor(dtsgDelay, IdealDelay, dtsgNumOfNode);
-[roverFactor] = factor(roverDelay, IdealDelay, roverNumOfNode);
+[floodingFactor] = factor(floodingDelay, idealDelay, floodingNumOfNode);
+[drgFactor] = factor(drgDelay, idealDelay, drgNumOfNode);
+[dtsgFactor] = factor(dtsgDelay, idealDelay, dtsgNumOfNode);
+[roverFactor] = factor(roverDelay, idealDelay, roverNumOfNode);
 
+delays = [idealDelay, floodingDelay, drgDelay, dtsgDelay, roverDelay];
+pdrs = [idealPDR, floodingPDR, drgPDR, dtsgPDR, roverPDR];
+[delayGaussE] = getGauss(delays, 1.0, 0);
+[pdrGaussE] = getGauss(pdrs, 1.0, 1);
+
+[idealE] = efficiency(idealValidNetworkRatio, delayGaussE(1), idealPDR);
+[floodingE] = efficiency(floodingValidNetworkRatio, delayGaussE(2), floodingPDR);
+[drgE] = efficiency(drgValidNetworkRatio, delayGaussE(3), drgPDR);
+[dtsgE] = efficiency(dtsgValidNetworkRatio, delayGaussE(4), dtsgPDR);
+[roverE] = efficiency(roverValidNetworkRatio, delayGaussE(5), roverPDR);
 
 % comparisonSpeed = 1.0/IdealDelay;
 % [floodingE] = efficiency(floodingFactor, 1.0/floodingDelay, comparisonSpeed, floodingPDR,IdealPDR);
@@ -39,11 +55,11 @@ BuildingRoadDensityRatio = buildingRoadRatio(Flooding);
 % [dtsgE] = efficiency(dtsgFactor, 1.0/dtsgDelay, comparisonSpeed, dtsgPDR,IdealPDR);
 % [roverE] = efficiency(roverFactor, 1.0/roverDelay, comparisonSpeed, roverPDR,IdealPDR);
 
-comparisonSpeed = 1.0/floodingDelay;
-[floodingE] = efficiency(floodingFactor, 1.0/floodingDelay, comparisonSpeed, floodingPDR,floodingPDR);
-[drgE] = efficiency(drgFactor, 1.0/drgDelay, comparisonSpeed, drgPDR,floodingPDR);
-[dtsgE] = efficiency(dtsgFactor, 1.0/dtsgDelay, comparisonSpeed, dtsgPDR,floodingPDR);
-[roverE] = efficiency(roverFactor, 1.0/roverDelay, comparisonSpeed, roverPDR,floodingPDR);
+% comparisonSpeed = 1.0/floodingDelay;
+% [floodingE] = efficiency(floodingFactor, 1.0/floodingDelay, comparisonSpeed, floodingPDR,floodingPDR);
+% [drgE] = efficiency(drgFactor, 1.0/drgDelay, comparisonSpeed, drgPDR,floodingPDR);
+% [dtsgE] = efficiency(dtsgFactor, 1.0/dtsgDelay, comparisonSpeed, dtsgPDR,floodingPDR);
+% [roverE] = efficiency(roverFactor, 1.0/roverDelay, comparisonSpeed, roverPDR,floodingPDR);
 
 % [dummyNumReceivedMsgNode] = averageNumReceivedMsgNode(Dummy);
 % [floodingNumReceivedMsgNode] = averageNumReceivedMsgNode(Flooding);
@@ -62,9 +78,9 @@ comparisonSpeed = 1.0/floodingDelay;
 % [dtsgE] = efficiency(dtsgNumReceivedMsgNode, dtsgMaxDelay);
 % [roverE] = efficiency(roverNumReceivedMsgNode, roverMaxDelay);
 
-Delay = [floodingDelay, drgDelay, dtsgDelay, roverDelay];
-PDR = [floodingPDR, drgPDR, dtsgPDR, roverPDR];
-E = [floodingE, drgE, dtsgE, roverE];
+Delay = [idealDelay, floodingDelay, drgDelay, dtsgDelay, roverDelay];
+PDR = [idealPDR, floodingPDR, drgPDR, dtsgPDR, roverPDR];
+E = [idealE, floodingE, drgE, dtsgE, roverE];
 
 end
 

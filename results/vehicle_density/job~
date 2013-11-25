@@ -3,7 +3,7 @@ tony: dtsg_150
 office:rover_150
 
 next step:
-rui: dummy_150
+
 rui: flooding_150
 
 finished:
@@ -13,3 +13,4 @@ office: drg_50
 tony: rover_50
 rui: flooding_50
 tony: drg_150
+rui: dummy_150

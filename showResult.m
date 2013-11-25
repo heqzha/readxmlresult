@@ -14,11 +14,11 @@ global USECASE_WIDTH_BETWEEN_BUILDING_60;
 %[vdVD1500, zrVD1500, brdrVD1500, delayVD1500, pdrVD1500, eVD1500 ] = getPerformMetrics(USECASE_VEHICLE_DENSITY_1500);
 
 [vdZZL500, zrZZL500, brdrZZL500, delayZZL500, pdrZZL500, eZZL500 ] = getPerformMetrics(USECASE_ZOR_ZOF_LENGTH_500);
-%[vdZZL1500, zrZZL1500, brdrZZL1500, delayZZL1500, pdrZZL1500, eZZL1500 ] = getPerformMetrics(USECASE_ZOR_ZOF_LENGTH_1500);
-zrZZL = [zrZZL500, zrBM];
-delayZZL = [delayZZL500; delayBM];
-pdrZZL = [pdrZZL500; pdrBM];
-eZZL = [eZZL500; eBM];
+[vdZZL1500, zrZZL1500, brdrZZL1500, delayZZL1500, pdrZZL1500, eZZL1500 ] = getPerformMetrics(USECASE_ZOR_ZOF_LENGTH_1500);
+zrZZL = [zrZZL500, zrBM, zrZZL1500];
+delayZZL = [delayZZL500; delayBM; delayZZL1500];
+pdrZZL = [pdrZZL500; pdrBM; pdrZZL1500];
+eZZL = [eZZL500; eBM; eZZL1500];
 showNow(zrZZL, delayZZL, pdrZZL, eZZL, 'ZOR Range');
 
 %[vdWBB20, zrWBB20, brdrWBB20, delayWBB20, pdrWBB20, eWBB20 ] = getPerformMetrics(USECASE_WIDTH_BETWEEN_BUILDING_20);
