@@ -7,12 +7,12 @@ catch
     error('Failed to read XML file %s.',filename);
 end
 
-
 try
-   theStruct = parseChildNodes(tree);
+    theStruct = parseChildNodes(tree);
 catch
    error('Unable to parse XML file %s.',filename);
 end
+
 
     
 end

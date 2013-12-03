@@ -40,7 +40,8 @@ BuildingRoadDensityRatio = buildingRoadRatio(Flooding);
 
 delays = [idealDelay, floodingDelay, drgDelay, dtsgDelay, roverDelay];
 pdrs = [idealPDR, floodingPDR, drgPDR, dtsgPDR, roverPDR];
-[delayGaussE] = getGauss(delays, 1.0, 0);
+averDelay = mean(delays);
+[delayGaussE] = getGauss(delays, averDelay, 0);
 %[pdrGaussE] = getGauss(pdrs, 1.0, 1);
 
 [idealE] = efficiency(idealValidNetworkRatio, delayGaussE(1), idealPDR);

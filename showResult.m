@@ -17,11 +17,6 @@ delayVD = [delayVD50; delayBM; delayVD150];
 pdrVD = [pdrVD50; pdrBM; pdrVD150];
 eVD = [eVD50; eBM; eVD150];
 showNow(vd, delayVD, pdrVD, eVD, 'Vehicle Density');
-%vd = [vdVD50, vdBM];
-%delayVD = [delayVD50; delayBM];
-%pdrVD = [pdrVD50; pdrBM];
-%eVD = [eVD50; eBM];
-%showNow(vd, delayVD, pdrVD, eVD, 'Vehicle Density');
 
 [vdZZL500, zrZZL500, brdrZZL500, delayZZL500, pdrZZL500, eZZL500 ] = getPerformMetrics(USECASE_ZOR_ZOF_LENGTH_500);
 [vdZZL1500, zrZZL1500, brdrZZL1500, delayZZL1500, pdrZZL1500, eZZL1500 ] = getPerformMetrics(USECASE_ZOR_ZOF_LENGTH_1500);
@@ -31,7 +26,12 @@ pdrZZL = [pdrZZL500; pdrBM; pdrZZL1500];
 eZZL = [eZZL500; eBM; eZZL1500];
 showNow(zrZZL, delayZZL, pdrZZL, eZZL, 'ZOR Range');
 
-%[vdWBB20, zrWBB20, brdrWBB20, delayWBB20, pdrWBB20, eWBB20 ] = getPerformMetrics(USECASE_WIDTH_BETWEEN_BUILDING_20);
-%[vdWBB60, zrWBB60, brdrWBB60, delayWBB60, pdrWBB60, eWBB60 ] = getPerformMetrics(USECASE_WIDTH_BETWEEN_BUILDING_60);
+[vdWBB20, zrWBB20, brdrWBB20, delayWBB20, pdrWBB20, eWBB20 ] = getPerformMetrics(USECASE_WIDTH_BETWEEN_BUILDING_20);
+[vdWBB60, zrWBB60, brdrWBB60, delayWBB60, pdrWBB60, eWBB60 ] = getPerformMetrics(USECASE_WIDTH_BETWEEN_BUILDING_60);
+wb = [brdrWBB20, brdrBM, brdrWBB60];
+delayWB = [delayWBB20; delayBM; delayWBB60];
+pdrWB = [pdrWBB20; pdrBM; pdrWBB60];
+eWB = [eWBB20; eBM; eWBB60];
+showNow(wb, delayWB, pdrWB, eWB, 'Building/Road Density Ratio');
 
 end
