@@ -1,22 +1,43 @@
-function showNow( x, Delays, PDRs, Efficiencies, xTitle)
+function showNow( x, Delays, PDRs, Efficiencies, xTitle, xmin, xmax)
+    figure;
+    %subplot(2,2,1);
+    hold on;
+    plot(x, Delays(:,1), '--b+', 'LineWidth', 2);
+    plot(x, Delays(:,2), ':mx',  'LineWidth', 2);
+    plot(x, Delays(:,3), '-.c*',  'LineWidth', 2);
+    plot(x, Delays(:,4), '-.gd',  'LineWidth', 2);
+    legend('Flooding', 'DRG', 'DTSG', 'ROVER');
+    xlabel(xTitle,'FontSize',12,'FontWeight','bold');
+    ylabel('Delay per Hop [seconds]','FontSize',12,'FontWeight','bold');
+    axis([xmin xmax 0 45]);
+    hold off;
     
     figure;
-    subplot(2,2,1);
-    plot(x,Delays(:,1), '-ro', x, Delays(:,2), '--b+', x, Delays(:,3), ':mx', x, Delays(:,4), '-.c*', x, Delays(:,5), '-.gd');
-    legend('Dummy', 'Flooding', 'DRG', 'DTSG', 'ROVER');
+    %subplot(2,2,2);
+    hold on;
+    PDRs = PDRs.*100.0;
+    plot(x, PDRs(:,1), '--b+', 'LineWidth', 2);
+    plot(x, PDRs(:,2), ':mx', 'LineWidth', 2);
+    plot(x, PDRs(:,3), '-.c*', 'LineWidth', 2);
+    plot(x, PDRs(:,4), '-.gd', 'LineWidth', 2);
+    legend('Flooding', 'DRG', 'DTSG', 'ROVER');
     xlabel(xTitle,'FontSize',12,'FontWeight','bold');
-    ylabel('Delay','FontSize',12,'FontWeight','bold');
+    ylabel('Packet Delivery Ratio [%]','FontSize',12,'FontWeight','bold');
+    axis([xmin xmax 0 100]);
+    hold off;
     
-    subplot(2,2,2);
-    plot(x,PDRs(:,1), '-ro', x, PDRs(:,2), '--b+', x, PDRs(:,3), ':mx', x, PDRs(:,4), '-.c*', x, PDRs(:,5), '-.gd');
-    legend('Dummy', 'Flooding', 'DRG', 'DTSG', 'ROVER');
+    figure;
+    %subplot(2,2,3);
+    hold on;
+    Efficiencies = Efficiencies.*100;
+    plot(x, Efficiencies(:,1), '--b+',  'LineWidth', 2);
+    plot(x, Efficiencies(:,2), ':mx',  'LineWidth', 2);
+    plot(x, Efficiencies(:,3), '-.c*',  'LineWidth', 2);
+    plot(x, Efficiencies(:,4), '-.gd',  'LineWidth', 2);
+    legend('Flooding', 'DRG', 'DTSG', 'ROVER');
     xlabel(xTitle,'FontSize',12,'FontWeight','bold');
-    ylabel('PDR','FontSize',12,'FontWeight','bold');
-    
-    subplot(2,2,3);
-    plot(x,Efficiencies(:,1), '-ro', x, Efficiencies(:,2), '--b+', x, Efficiencies(:,3), ':mx', x, Efficiencies(:,4), '-.c*', x, Efficiencies(:, 5), '-.gd');
-    legend('Dummy', 'Flooding', 'DRG', 'DTSG', 'ROVER');
-    xlabel(xTitle,'FontSize',12,'FontWeight','bold');
-    ylabel('Efficiency','FontSize',12,'FontWeight','bold');
+    ylabel('Efficiency [%]','FontSize',12,'FontWeight','bold');
+    axis([xmin xmax 0 100]);
+    hold off;
 end
 
