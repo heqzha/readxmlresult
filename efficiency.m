@@ -10,7 +10,7 @@
 %     efficiency =  (speedTx/comparisonSpeedTx) * (pdr/comparisonPdr);
 % end
 
- function [ efficiency ] = efficiency(validNetworkRatio, delayE, pdr)
+ function [ efficiency ] = efficiency(delayE, pdr)
      %efficiency =  validNetworkRatio * delayE * pdr;
      efficiency =  delayE * pdr;
  end
