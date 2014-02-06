@@ -4,7 +4,7 @@ SimTime = [];
 NumVehicleInCity = [];
 attributes = [];
 
-filename = 'FloodingVehicleInCity1.xml';
+filename = 'FloodingVehicleInCity.xml';
  try
     tree = xmlread(filename);
  catch
@@ -25,6 +25,13 @@ filename = 'FloodingVehicleInCity1.xml';
        NumVehicleInCity(i+1) = attributes(1);
    end
    
+   figure;
+   hold on;
+   set(gcf,'Color','white');
    plot(SimTime,NumVehicleInCity);
-   
+   xlabel('Simulation Time','FontSize',12,'FontWeight','bold');
+   ylabel('Number of Vehilces In City','FontSize',12,'FontWeight','bold');
+   axis([0 1200 0 450]);
+   title('Number of Vehilces In City vs.Simulation Time', 'FontSize',16,'FontWeight','bold');    
+   hold off;
 end

@@ -31,13 +31,13 @@ pdrVD = [pdrVD50; pdrVD75; pdrBM; pdrVD125;pdrVD150];
 eVD = [eVD50; eVD75;eBM; eVD125; eVD150];
 
 stdDelayVD = [stdDelayVD50; stdDelayVD75; stdDelayBM; stdDelayVD125; stdDelayVD150];
-floodingDelayVD = std(delayVD(:,1));
-drgDelayVD = std(delayVD(:, 2));
-dtsgDelayVD = std(delayVD(:,3));
-roverDelayVD = std(delayVD(:,4));
-stdDelayVDAll = [floodingDelayVD, drgDelayVD, dtsgDelayVD, roverDelayVD];
+floodingDelayVD = mean(delayVD(:,1));
+drgDelayVD = mean(delayVD(:, 2));
+dtsgDelayVD = mean(delayVD(:,3));
+roverDelayVD = mean(delayVD(:,4));
+meanDelayVDAll = [floodingDelayVD, drgDelayVD, dtsgDelayVD, roverDelayVD];
 
-showNow(vd, delayVD, pdrVD, eVD, 'Vehicle Density [vehicles/square kilometers]', 45, 155);
+showNow(vd, delayVD, pdrVD, eVD, 'Vehicle Density', ' [vehicles/square kilometers]', 45, 155);
 
 [vdZor750, zrZor750, brdrZor750, delayZor750, pdrZor750, eZor750, stdDelayZor750 ] = getPerformMetrics(USECASE_ZOR_ZOF_LENGTH_750);
 [vdZor1000, zrZor1000, brdrZor1000, delayZor1000, pdrZor1000, eZor1000, stdDelayZor1000 ] = getPerformMetrics(USECASE_ZOR_ZOF_LENGTH_1000);
@@ -50,13 +50,13 @@ pdrZZL = [pdrBM; pdrZor750; pdrZor1000; pdrZor1250; pdrZor1500];
 eZZL = [eBM; eZor750; eZor1000; eZor1250; eZor1500];
 
 stdDelayZZL = [stdDelayBM; stdDelayZor750; stdDelayZor1000; stdDelayZor1250; stdDelayZor1500];
-floodingDelayZZL = std(delayZZL(:,1));
-drgDelayZZL = std(delayZZL(:, 2));
-dtsgDelayZZL = std(delayZZL(:,3));
-roverDelayZZL = std(delayZZL(:,4));
-stdDelayZZLAll = [floodingDelayZZL, drgDelayZZL, dtsgDelayZZL, roverDelayZZL];
+floodingDelayZZL = mean(delayZZL(:,1));
+drgDelayZZL = mean(delayZZL(:, 2));
+dtsgDelayZZL = mean(delayZZL(:,3));
+roverDelayZZL = mean(delayZZL(:,4));
+meanDelayZZLAll = [floodingDelayZZL, drgDelayZZL, dtsgDelayZZL, roverDelayZZL];
 
-showNow(zrZZL, delayZZL, pdrZZL, eZZL, 'ZOR Range [meters]', 450, 1550);
+showNow(zrZZL, delayZZL, pdrZZL, eZZL, 'ZOR Range', ' [meters]', 450, 1550);
 
 [vdWBB20, zrWBB20, brdrWBB20, delayWBB20, pdrWBB20, eWBB20, stdDelayWBB20 ] = getPerformMetrics(USECASE_WIDTH_BETWEEN_BUILDING_20);
 [vdWBB30, zrWBB30, brdrWBB30, delayWBB30, pdrWBB30, eWBB30, stdDelayWBB30 ] = getPerformMetrics(USECASE_WIDTH_BETWEEN_BUILDING_30);
@@ -69,12 +69,12 @@ pdrWB = [pdrWBB20; pdrWBB30; pdrBM; pdrWBB50; pdrWBB60];
 eWB = [eWBB20; eWBB30; eBM; eWBB50; eWBB60];
 
 stdDelayWB = [stdDelayWBB20; stdDelayWBB30; stdDelayBM; stdDelayWBB50; stdDelayWBB60];
-floodingDelayWB = std(delayWB(:,1));
-drgDelayWB = std(delayWB(:, 2));
-dtsgDelayWB = std(delayWB(:,3));
-roverDelayWB = std(delayWB(:,4));
-stdDelayWBAll = [floodingDelayWB, drgDelayWB, dtsgDelayWB, roverDelayWB];
+floodingDelayWB = mean(delayWB(:,1));
+drgDelayWB = mean(delayWB(:, 2));
+dtsgDelayWB = mean(delayWB(:,3));
+roverDelayWB = mean(delayWB(:,4));
+meanDelayWBAll = [floodingDelayWB, drgDelayWB, dtsgDelayWB, roverDelayWB];
 
-showNow(wb, delayWB, pdrWB, eWB, 'Road Building Ratio', 0.04, 0.14);
+showNow(wb, delayWB, pdrWB, eWB, 'Building Distance/Road Length Ratio','', 0.04, 0.14);
 
 end
