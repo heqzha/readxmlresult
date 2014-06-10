@@ -1,39 +1,12 @@
-function [VehicleDensity, ZORRange, BuildingRoadDensityRatio, Delay, PDR, E, stdDelay] = getPerformMetrics( usecase )
-[Dummy, Flooding, DRG,DTSG, ROVER] = protocol(usecase);
+function [ delay_time_per_hop, packet_delivery_success_ratio, packet_delivery_efficiency, std_delay_time_per_hop ] = getPerformMetrics( protocol, accept_delay_time)
+%GETPERFORMMETRICS Summary of this function goes here
+%   Detailed explanation goes here
+delay_time_per_hop = averDelayTimePerHop(protocol);
+packet_delivery_success_ratio = averPacketDeliverySuccessRatio(protocol);
 
-VehicleDensity = vehicleDensity(Flooding);
-ZORRange = zorRange(Flooding);
-BuildingRoadDensityRatio = buildingRoadRatio(Flooding);
+time_efficiency = getGauss(delay_time_per_hop, accept_delay_time, 0);
+packet_delivery_efficiency = getPacketDeliveryEfficiency(time_efficiency, packet_delivery_success_ratio);
 
-[stdFloodingDelay] = stdOneHopDelay(Flooding);
-[stdDrgDelay] = stdOneHopDelay(DRG);
-[stdDtsgDelay] = stdOneHopDelay(DTSG);
-[stdRoverDelay] = stdOneHopDelay(ROVER);
-
-[idealDelay] = averageOneHopDelay(Dummy);
-[floodingDelay] = averageOneHopDelay(Flooding);
-[drgDelay] = averageOneHopDelay(DRG);
-[dtsgDelay] = averageOneHopDelay(DTSG);
-[roverDelay] = averageOneHopDelay(ROVER);
-
-[idealPDR] = averagePDR(Dummy);
-[floodingPDR] = averagePDR(Flooding);
-[drgPDR] = averagePDR(DRG);
-[dtsgPDR] = averagePDR(DTSG);
-[roverPDR] = averagePDR(ROVER);
-
-delays = [floodingDelay, drgDelay, dtsgDelay, roverDelay];
-averDelay = mean(delays);
-[delayGaussE] = getGauss(delays, averDelay, 0);
-
-[floodingE] = efficiency(delayGaussE(1), floodingPDR);
-[drgE] = efficiency(delayGaussE(2), drgPDR);
-[dtsgE] = efficiency(delayGaussE(3), dtsgPDR);
-[roverE] = efficiency(delayGaussE(4), roverPDR);
-
-Delay = [floodingDelay, drgDelay, dtsgDelay, roverDelay];
-PDR = [floodingPDR, drgPDR, dtsgPDR, roverPDR];
-E = [floodingE, drgE, dtsgE, roverE];
-stdDelay = [stdFloodingDelay, stdDrgDelay, stdDtsgDelay, stdRoverDelay];
+std_delay_time_per_hop = stdDelayTimePerHop(protocol);
 end
 

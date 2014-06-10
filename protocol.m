@@ -1,74 +1,94 @@
-function [Dummy, Flooding, DRG,DTSG, ROVER]= protocol(usecase)
-global FOLDER_BENCHMARK;
-global FOLDER_VEHICLE_DENSITY;
-global FOLDER_ZOR_ZOF_LENGTH;
-global FOLDER_WIDTH_BETWEEN_BUILDING;
-
-global USECASE_BENCHMARK;
-
-global USECASE_VEHICLE_DENSITY_50;
-global USECASE_VEHICLE_DENSITY_75;
-global USECASE_VEHICLE_DENSITY_125;
-global USECASE_VEHICLE_DENSITY_150;
-
-global USECASE_ZOR_ZOF_LENGTH_750;
-global USECASE_ZOR_ZOF_LENGTH_1000;
-global USECASE_ZOR_ZOF_LENGTH_1250;
-global USECASE_ZOR_ZOF_LENGTH_1500;
-
-global USECASE_WIDTH_BETWEEN_BUILDING_20;
-global USECASE_WIDTH_BETWEEN_BUILDING_30;
-global USECASE_WIDTH_BETWEEN_BUILDING_50;
-global USECASE_WIDTH_BETWEEN_BUILDING_60;
-
-switch usecase
-    case USECASE_BENCHMARK
-        folder = fullfile(FOLDER_BENCHMARK);
-    case USECASE_VEHICLE_DENSITY_50
-        folder = fullfile(FOLDER_VEHICLE_DENSITY, '50');
-    case USECASE_VEHICLE_DENSITY_75
-        folder = fullfile(FOLDER_VEHICLE_DENSITY, '75');
-    case USECASE_VEHICLE_DENSITY_125
-        folder = fullfile(FOLDER_VEHICLE_DENSITY, '125');
-    case USECASE_VEHICLE_DENSITY_150
-        folder = fullfile(FOLDER_VEHICLE_DENSITY, '150');
-    case USECASE_ZOR_ZOF_LENGTH_750
-        folder = fullfile(FOLDER_ZOR_ZOF_LENGTH, '750');
-    case USECASE_ZOR_ZOF_LENGTH_1000
-        folder = fullfile(FOLDER_ZOR_ZOF_LENGTH, '1000');
-    case USECASE_ZOR_ZOF_LENGTH_1250
-        folder = fullfile(FOLDER_ZOR_ZOF_LENGTH, '1250');
-    case USECASE_ZOR_ZOF_LENGTH_1500
-        folder = fullfile(FOLDER_ZOR_ZOF_LENGTH, '1500');
-    case USECASE_WIDTH_BETWEEN_BUILDING_20
-        folder = fullfile(FOLDER_WIDTH_BETWEEN_BUILDING, '20');
-    case USECASE_WIDTH_BETWEEN_BUILDING_30
-        folder = fullfile(FOLDER_WIDTH_BETWEEN_BUILDING, '30');
-    case USECASE_WIDTH_BETWEEN_BUILDING_50
-        folder = fullfile(FOLDER_WIDTH_BETWEEN_BUILDING, '50');
-    case USECASE_WIDTH_BETWEEN_BUILDING_60
-        folder = fullfile(FOLDER_WIDTH_BETWEEN_BUILDING, '60');
-    otherwise
+classdef protocol < hgsetget
+    %PROTOCOL Summary of this class goes here
+    %   Detailed explanation goes here
+    
+    properties
+        name
+        delay_time_per_hop
+        packet_delivery_success_ratio
+        packet_delivery_efficiency
+        std_delay_time_per_hop
+    end
+    
+    properties (Access = private)
+        vehi_density
+        zor_zof_range
+        buid_distance
+    end
+    
+    methods (Hidden = true)
+       
+        function index = get_param_index(obj, param, array)
+            index = 0;
+            if param
+                for i = 1:length(array)
+                    if param == array(i)
+                        index = i;
+                        break;
+                    end
+                end
+            end
+        end
+    end
+    
+    methods
+        function obj = protocol(name, vehi_density, zor_zof_range, buid_distance)
+            obj.name = name;
+            obj.vehi_density = vehi_density;
+            obj.zor_zof_range = zor_zof_range;
+            obj.buid_distance = buid_distance;
+        end
         
+        function [scenario_index, param_index] = get_scenario_index(obj, scenario_name, param)
+            switch scenario_name
+                case 'vehicle_density'
+                    scenario_index = 1;
+                    param_index = obj.get_param_index(param, obj.vehi_density);
+                case 'zor_zof_range'
+                    scenario_index = 2;
+                    param_index = obj.get_param_index(param, obj.zor_zof_range);
+                case 'buiding_distance'
+                    scenario_index = 3;
+                    param_index = obj.get_param_index(param, obj.buid_distance);
+                otherwise
+                    scenario_index = 0;
+                    param_index = 0;
+            end
+        end        
+        
+        function obj = set.delay_time_per_hop(obj, val)
+            obj.delay_time_per_hop = val;
+        end
+        
+        function obj = set.packet_delivery_success_ratio(obj, val)
+            obj.packet_delivery_success_ratio = val;
+        end
+        
+        function obj = set.packet_delivery_efficiency(obj, val)
+            obj.packet_delivery_efficiency = val;
+        end
+        
+        function obj = set.std_delay_time_per_hop(obj, val)
+            obj.std_delay_time_per_hop = val;
+        end
+        
+        function val = get.delay_time_per_hop(obj)
+            val = obj.delay_time_per_hop;
+        end
+        
+        function val = get.packet_delivery_success_ratio(obj)
+            val = obj.packet_delivery_success_ratio;
+        end
+        
+        function val = get.packet_delivery_efficiency(obj)
+            val = obj.packet_delivery_efficiency;
+        end
+        
+        function val = get.std_delay_time_per_hop(obj)
+            val = obj.std_delay_time_per_hop;
+        end        
+
+    end
+    
 end
 
-if size(folder) > 0
-    dummyFile = 'Dummy.xml';
-    Dummy = parseXML(fullfile(folder, dummyFile));
-    
-    floodingFile ='Flooding.xml';
-    Flooding = parseXML(fullfile(folder, floodingFile));
-    
-    drgFile = 'DRG.xml';
-    DRG = parseXML(fullfile(folder, drgFile));
-    
-    roverFile = 'ROVER.xml';
-    ROVER = parseXML(fullfile(folder, roverFile));
-    %ROVER = 0;
-    
-    dtsgFile = 'DTSG.xml';
-    DTSG = parseXML(fullfile(folder, dtsgFile));
-    
-end
-
-end
