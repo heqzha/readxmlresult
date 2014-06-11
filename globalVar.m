@@ -5,7 +5,7 @@ classdef globalVar<handle%SingleInstance
          global_vehi_density = [50, 100, 150, 200, 250, 300];
          global_zor_zof_range = [600, 680, 760, 840, 920, 1000];
          global_buid_distance = [20, 30, 40, 50, 60, 70];
-         global_accept_delay_time = 0.005;%unit seconds        
+         global_accept_delay_time = 0.01;%unit seconds        
     end
     
     properties

@@ -5,7 +5,7 @@ hold on;
 set(gcf,'Color','white');
 line_style = [cellstr('-bp'), cellstr(':ks'), cellstr('--ro'), cellstr('-.gd')];
 for i = 1:length(data(:,1))
-    plot(secnario, data(i,:), char(line_style(mod(i,length(line_style)))), 'LineWidth', 2);
+    plot(secnario, data(i,:), char(line_style(mod(i,length(line_style)+1))), 'LineWidth', 2);
 end
 legend(protocol_name);
 xlabel(strcat(scenario_name,scenario_unit),'FontSize',14,'FontWeight','bold');

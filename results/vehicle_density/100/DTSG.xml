@@ -1,6 +1,6 @@
-<Protocol Name="DRG">
-    <The_Simulation_Start_at>2014-06-11,23:21:10</The_Simulation_Start_at>
-    <The_Simulation_End_at>2014-06-11,23:24:18</The_Simulation_End_at>
+<Protocol Name="DTSG">
+    <The_Simulation_Start_at>2014-06-11,23:56:37</The_Simulation_Start_at>
+    <The_Simulation_End_at>2014-06-11,23:58:06</The_Simulation_End_at>
     <Playground_X>1025</Playground_X>
     <Playground_Y>1025</Playground_Y>
     <Road_Length>184.095</Road_Length>
@@ -21,20 +21,15 @@
         <The_Shape_of_ZOF>1</The_Shape_of_ZOF>
         <The_Length_of_ZOF>840</The_Length_of_ZOF>
         <The_Width_of_ZOF>840</The_Width_of_ZOF>
-        <The_Number_of_Received_Message_Nodes_ZOR>60</The_Number_of_Received_Message_Nodes_ZOR>
-        <The_Number_of_Received_Message_Nodes_ZOF>60</The_Number_of_Received_Message_Nodes_ZOF>
+        <The_Number_of_Received_Message_Nodes_ZOR>3</The_Number_of_Received_Message_Nodes_ZOR>
+        <The_Number_of_Received_Message_Nodes_ZOF>3</The_Number_of_Received_Message_Nodes_ZOF>
         <The_Number_of_Nodes_Which_Passing_Through_ZOR>62</The_Number_of_Nodes_Which_Passing_Through_ZOR>
         <The_Number_of_Nodes_Which_Passing_Through_ZOF>62</The_Number_of_Nodes_Which_Passing_Through_ZOF>
-        <The_Packet_Delivery_Ratio>0.967742</The_Packet_Delivery_Ratio>
-        <The_Max_Hops>6</The_Max_Hops>
-        <The_Max_Delay_Time>0.00817358</The_Max_Delay_Time>
+        <The_Packet_Delivery_Ratio>0.0483871</The_Packet_Delivery_Ratio>
+        <The_Max_Hops>1</The_Max_Hops>
+        <The_Max_Delay_Time>0.00429674</The_Max_Delay_Time>
         <Delay_Time_Per_Hop>
-            <Delay_Time>0.00445274</Delay_Time>
-            <Delay_Time>0.00154371</Delay_Time>
-            <Delay_Time>0.0003225</Delay_Time>
-            <Delay_Time>0.000245371</Delay_Time>
-            <Delay_Time>0.000736673</Delay_Time>
-            <Delay_Time>0.000872582</Delay_Time>
+            <Delay_Time>0.00429674</Delay_Time>
         </Delay_Time_Per_Hop>
     </Network_Identification_Number>
     <Network_Identification_Number ID="1">
@@ -49,18 +44,15 @@
         <The_Shape_of_ZOF>1</The_Shape_of_ZOF>
         <The_Length_of_ZOF>840</The_Length_of_ZOF>
         <The_Width_of_ZOF>840</The_Width_of_ZOF>
-        <The_Number_of_Received_Message_Nodes_ZOR>56</The_Number_of_Received_Message_Nodes_ZOR>
-        <The_Number_of_Received_Message_Nodes_ZOF>56</The_Number_of_Received_Message_Nodes_ZOF>
+        <The_Number_of_Received_Message_Nodes_ZOR>16</The_Number_of_Received_Message_Nodes_ZOR>
+        <The_Number_of_Received_Message_Nodes_ZOF>16</The_Number_of_Received_Message_Nodes_ZOF>
         <The_Number_of_Nodes_Which_Passing_Through_ZOR>57</The_Number_of_Nodes_Which_Passing_Through_ZOR>
         <The_Number_of_Nodes_Which_Passing_Through_ZOF>57</The_Number_of_Nodes_Which_Passing_Through_ZOF>
-        <The_Packet_Delivery_Ratio>0.982456</The_Packet_Delivery_Ratio>
-        <The_Max_Hops>4</The_Max_Hops>
-        <The_Max_Delay_Time>0.0082212</The_Max_Delay_Time>
+        <The_Packet_Delivery_Ratio>0.280702</The_Packet_Delivery_Ratio>
+        <The_Max_Hops>1</The_Max_Hops>
+        <The_Max_Delay_Time>0.00439119</The_Max_Delay_Time>
         <Delay_Time_Per_Hop>
-            <Delay_Time>0.00436576</Delay_Time>
-            <Delay_Time>0.00148422</Delay_Time>
-            <Delay_Time>0.000917272</Delay_Time>
-            <Delay_Time>0.00145394</Delay_Time>
+            <Delay_Time>0.00439119</Delay_Time>
         </Delay_Time_Per_Hop>
     </Network_Identification_Number>
     <Network_Identification_Number ID="2">
@@ -75,19 +67,15 @@
         <The_Shape_of_ZOF>1</The_Shape_of_ZOF>
         <The_Length_of_ZOF>840</The_Length_of_ZOF>
         <The_Width_of_ZOF>840</The_Width_of_ZOF>
-        <The_Number_of_Received_Message_Nodes_ZOR>22</The_Number_of_Received_Message_Nodes_ZOR>
-        <The_Number_of_Received_Message_Nodes_ZOF>22</The_Number_of_Received_Message_Nodes_ZOF>
+        <The_Number_of_Received_Message_Nodes_ZOR>8</The_Number_of_Received_Message_Nodes_ZOR>
+        <The_Number_of_Received_Message_Nodes_ZOF>8</The_Number_of_Received_Message_Nodes_ZOF>
         <The_Number_of_Nodes_Which_Passing_Through_ZOR>27</The_Number_of_Nodes_Which_Passing_Through_ZOR>
         <The_Number_of_Nodes_Which_Passing_Through_ZOF>27</The_Number_of_Nodes_Which_Passing_Through_ZOF>
-        <The_Packet_Delivery_Ratio>0.814815</The_Packet_Delivery_Ratio>
-        <The_Max_Hops>5</The_Max_Hops>
-        <The_Max_Delay_Time>0.00857201</The_Max_Delay_Time>
+        <The_Packet_Delivery_Ratio>0.296296</The_Packet_Delivery_Ratio>
+        <The_Max_Hops>1</The_Max_Hops>
+        <The_Max_Delay_Time>0.00444329</The_Max_Delay_Time>
         <Delay_Time_Per_Hop>
-            <Delay_Time>0.00450851</Delay_Time>
-            <Delay_Time>0.00076128</Delay_Time>
-            <Delay_Time>0.00107025</Delay_Time>
-            <Delay_Time>0.00122023</Delay_Time>
-            <Delay_Time>0.00101173</Delay_Time>
+            <Delay_Time>0.00444329</Delay_Time>
         </Delay_Time_Per_Hop>
     </Network_Identification_Number>
     <Network_Identification_Number ID="3">
@@ -102,18 +90,15 @@
         <The_Shape_of_ZOF>1</The_Shape_of_ZOF>
         <The_Length_of_ZOF>840</The_Length_of_ZOF>
         <The_Width_of_ZOF>840</The_Width_of_ZOF>
-        <The_Number_of_Received_Message_Nodes_ZOR>40</The_Number_of_Received_Message_Nodes_ZOR>
-        <The_Number_of_Received_Message_Nodes_ZOF>40</The_Number_of_Received_Message_Nodes_ZOF>
+        <The_Number_of_Received_Message_Nodes_ZOR>6</The_Number_of_Received_Message_Nodes_ZOR>
+        <The_Number_of_Received_Message_Nodes_ZOF>6</The_Number_of_Received_Message_Nodes_ZOF>
         <The_Number_of_Nodes_Which_Passing_Through_ZOR>42</The_Number_of_Nodes_Which_Passing_Through_ZOR>
         <The_Number_of_Nodes_Which_Passing_Through_ZOF>42</The_Number_of_Nodes_Which_Passing_Through_ZOF>
-        <The_Packet_Delivery_Ratio>0.952381</The_Packet_Delivery_Ratio>
-        <The_Max_Hops>4</The_Max_Hops>
-        <The_Max_Delay_Time>0.00794186</The_Max_Delay_Time>
+        <The_Packet_Delivery_Ratio>0.142857</The_Packet_Delivery_Ratio>
+        <The_Max_Hops>1</The_Max_Hops>
+        <The_Max_Delay_Time>0.00464373</The_Max_Delay_Time>
         <Delay_Time_Per_Hop>
-            <Delay_Time>0.00451388</Delay_Time>
-            <Delay_Time>0.00194131</Delay_Time>
-            <Delay_Time>0.000348779</Delay_Time>
-            <Delay_Time>0.00113789</Delay_Time>
+            <Delay_Time>0.00464373</Delay_Time>
         </Delay_Time_Per_Hop>
     </Network_Identification_Number>
     <Network_Identification_Number ID="4">
@@ -149,17 +134,15 @@
         <The_Shape_of_ZOF>1</The_Shape_of_ZOF>
         <The_Length_of_ZOF>840</The_Length_of_ZOF>
         <The_Width_of_ZOF>840</The_Width_of_ZOF>
-        <The_Number_of_Received_Message_Nodes_ZOR>41</The_Number_of_Received_Message_Nodes_ZOR>
-        <The_Number_of_Received_Message_Nodes_ZOF>41</The_Number_of_Received_Message_Nodes_ZOF>
+        <The_Number_of_Received_Message_Nodes_ZOR>22</The_Number_of_Received_Message_Nodes_ZOR>
+        <The_Number_of_Received_Message_Nodes_ZOF>22</The_Number_of_Received_Message_Nodes_ZOF>
         <The_Number_of_Nodes_Which_Passing_Through_ZOR>43</The_Number_of_Nodes_Which_Passing_Through_ZOR>
         <The_Number_of_Nodes_Which_Passing_Through_ZOF>43</The_Number_of_Nodes_Which_Passing_Through_ZOF>
-        <The_Packet_Delivery_Ratio>0.953488</The_Packet_Delivery_Ratio>
-        <The_Max_Hops>3</The_Max_Hops>
-        <The_Max_Delay_Time>0.00574058</The_Max_Delay_Time>
+        <The_Packet_Delivery_Ratio>0.511628</The_Packet_Delivery_Ratio>
+        <The_Max_Hops>1</The_Max_Hops>
+        <The_Max_Delay_Time>0.00432393</The_Max_Delay_Time>
         <Delay_Time_Per_Hop>
-            <Delay_Time>0.00444124</Delay_Time>
-            <Delay_Time>0.000898744</Delay_Time>
-            <Delay_Time>0.000400597</Delay_Time>
+            <Delay_Time>0.00432393</Delay_Time>
         </Delay_Time_Per_Hop>
     </Network_Identification_Number>
     <Network_Identification_Number ID="6">
@@ -174,20 +157,15 @@
         <The_Shape_of_ZOF>1</The_Shape_of_ZOF>
         <The_Length_of_ZOF>840</The_Length_of_ZOF>
         <The_Width_of_ZOF>840</The_Width_of_ZOF>
-        <The_Number_of_Received_Message_Nodes_ZOR>23</The_Number_of_Received_Message_Nodes_ZOR>
-        <The_Number_of_Received_Message_Nodes_ZOF>23</The_Number_of_Received_Message_Nodes_ZOF>
+        <The_Number_of_Received_Message_Nodes_ZOR>7</The_Number_of_Received_Message_Nodes_ZOR>
+        <The_Number_of_Received_Message_Nodes_ZOF>7</The_Number_of_Received_Message_Nodes_ZOF>
         <The_Number_of_Nodes_Which_Passing_Through_ZOR>25</The_Number_of_Nodes_Which_Passing_Through_ZOR>
         <The_Number_of_Nodes_Which_Passing_Through_ZOF>25</The_Number_of_Nodes_Which_Passing_Through_ZOF>
-        <The_Packet_Delivery_Ratio>0.92</The_Packet_Delivery_Ratio>
-        <The_Max_Hops>6</The_Max_Hops>
-        <The_Max_Delay_Time>0.0091917</The_Max_Delay_Time>
+        <The_Packet_Delivery_Ratio>0.28</The_Packet_Delivery_Ratio>
+        <The_Max_Hops>1</The_Max_Hops>
+        <The_Max_Delay_Time>0.00440273</The_Max_Delay_Time>
         <Delay_Time_Per_Hop>
-            <Delay_Time>0.00433804</Delay_Time>
-            <Delay_Time>0.000232123</Delay_Time>
-            <Delay_Time>0.00097878</Delay_Time>
-            <Delay_Time>0.00116239</Delay_Time>
-            <Delay_Time>0.0013892</Delay_Time>
-            <Delay_Time>0.00109116</Delay_Time>
+            <Delay_Time>0.00440273</Delay_Time>
         </Delay_Time_Per_Hop>
     </Network_Identification_Number>
     <Network_Identification_Number ID="7">
@@ -202,20 +180,15 @@
         <The_Shape_of_ZOF>1</The_Shape_of_ZOF>
         <The_Length_of_ZOF>840</The_Length_of_ZOF>
         <The_Width_of_ZOF>840</The_Width_of_ZOF>
-        <The_Number_of_Received_Message_Nodes_ZOR>42</The_Number_of_Received_Message_Nodes_ZOR>
-        <The_Number_of_Received_Message_Nodes_ZOF>42</The_Number_of_Received_Message_Nodes_ZOF>
+        <The_Number_of_Received_Message_Nodes_ZOR>14</The_Number_of_Received_Message_Nodes_ZOR>
+        <The_Number_of_Received_Message_Nodes_ZOF>14</The_Number_of_Received_Message_Nodes_ZOF>
         <The_Number_of_Nodes_Which_Passing_Through_ZOR>48</The_Number_of_Nodes_Which_Passing_Through_ZOR>
         <The_Number_of_Nodes_Which_Passing_Through_ZOF>48</The_Number_of_Nodes_Which_Passing_Through_ZOF>
-        <The_Packet_Delivery_Ratio>0.875</The_Packet_Delivery_Ratio>
-        <The_Max_Hops>6</The_Max_Hops>
-        <The_Max_Delay_Time>0.00955521</The_Max_Delay_Time>
+        <The_Packet_Delivery_Ratio>0.291667</The_Packet_Delivery_Ratio>
+        <The_Max_Hops>1</The_Max_Hops>
+        <The_Max_Delay_Time>0.00445672</The_Max_Delay_Time>
         <Delay_Time_Per_Hop>
-            <Delay_Time>0.00458716</Delay_Time>
-            <Delay_Time>0.000476456</Delay_Time>
-            <Delay_Time>0.00214471</Delay_Time>
-            <Delay_Time>0.000660607</Delay_Time>
-            <Delay_Time>0.000231921</Delay_Time>
-            <Delay_Time>0.00145436</Delay_Time>
+            <Delay_Time>0.00445672</Delay_Time>
         </Delay_Time_Per_Hop>
     </Network_Identification_Number>
     <Network_Identification_Number ID="8">
@@ -230,19 +203,15 @@
         <The_Shape_of_ZOF>1</The_Shape_of_ZOF>
         <The_Length_of_ZOF>840</The_Length_of_ZOF>
         <The_Width_of_ZOF>840</The_Width_of_ZOF>
-        <The_Number_of_Received_Message_Nodes_ZOR>23</The_Number_of_Received_Message_Nodes_ZOR>
-        <The_Number_of_Received_Message_Nodes_ZOF>23</The_Number_of_Received_Message_Nodes_ZOF>
+        <The_Number_of_Received_Message_Nodes_ZOR>8</The_Number_of_Received_Message_Nodes_ZOR>
+        <The_Number_of_Received_Message_Nodes_ZOF>8</The_Number_of_Received_Message_Nodes_ZOF>
         <The_Number_of_Nodes_Which_Passing_Through_ZOR>25</The_Number_of_Nodes_Which_Passing_Through_ZOR>
         <The_Number_of_Nodes_Which_Passing_Through_ZOF>25</The_Number_of_Nodes_Which_Passing_Through_ZOF>
-        <The_Packet_Delivery_Ratio>0.92</The_Packet_Delivery_Ratio>
-        <The_Max_Hops>5</The_Max_Hops>
-        <The_Max_Delay_Time>0.00710785</The_Max_Delay_Time>
+        <The_Packet_Delivery_Ratio>0.32</The_Packet_Delivery_Ratio>
+        <The_Max_Hops>1</The_Max_Hops>
+        <The_Max_Delay_Time>0.00438626</The_Max_Delay_Time>
         <Delay_Time_Per_Hop>
-            <Delay_Time>0.00424348</Delay_Time>
-            <Delay_Time>0.000309681</Delay_Time>
-            <Delay_Time>0.000167325</Delay_Time>
-            <Delay_Time>0.000595714</Delay_Time>
-            <Delay_Time>0.00179164</Delay_Time>
+            <Delay_Time>0.00438626</Delay_Time>
         </Delay_Time_Per_Hop>
     </Network_Identification_Number>
     <Network_Identification_Number ID="9">
@@ -257,19 +226,15 @@
         <The_Shape_of_ZOF>1</The_Shape_of_ZOF>
         <The_Length_of_ZOF>840</The_Length_of_ZOF>
         <The_Width_of_ZOF>840</The_Width_of_ZOF>
-        <The_Number_of_Received_Message_Nodes_ZOR>42</The_Number_of_Received_Message_Nodes_ZOR>
-        <The_Number_of_Received_Message_Nodes_ZOF>42</The_Number_of_Received_Message_Nodes_ZOF>
+        <The_Number_of_Received_Message_Nodes_ZOR>14</The_Number_of_Received_Message_Nodes_ZOR>
+        <The_Number_of_Received_Message_Nodes_ZOF>14</The_Number_of_Received_Message_Nodes_ZOF>
         <The_Number_of_Nodes_Which_Passing_Through_ZOR>45</The_Number_of_Nodes_Which_Passing_Through_ZOR>
         <The_Number_of_Nodes_Which_Passing_Through_ZOF>45</The_Number_of_Nodes_Which_Passing_Through_ZOF>
-        <The_Packet_Delivery_Ratio>0.933333</The_Packet_Delivery_Ratio>
-        <The_Max_Hops>5</The_Max_Hops>
-        <The_Max_Delay_Time>0.00636159</The_Max_Delay_Time>
+        <The_Packet_Delivery_Ratio>0.311111</The_Packet_Delivery_Ratio>
+        <The_Max_Hops>1</The_Max_Hops>
+        <The_Max_Delay_Time>0.0043877</The_Max_Delay_Time>
         <Delay_Time_Per_Hop>
-            <Delay_Time>0.00438779</Delay_Time>
-            <Delay_Time>0.00028388</Delay_Time>
-            <Delay_Time>0.000683277</Delay_Time>
-            <Delay_Time>0.000566333</Delay_Time>
-            <Delay_Time>0.000440318</Delay_Time>
+            <Delay_Time>0.0043877</Delay_Time>
         </Delay_Time_Per_Hop>
     </Network_Identification_Number>
     <Network_Identification_Number ID="10">
@@ -284,20 +249,15 @@
         <The_Shape_of_ZOF>1</The_Shape_of_ZOF>
         <The_Length_of_ZOF>840</The_Length_of_ZOF>
         <The_Width_of_ZOF>840</The_Width_of_ZOF>
-        <The_Number_of_Received_Message_Nodes_ZOR>66</The_Number_of_Received_Message_Nodes_ZOR>
-        <The_Number_of_Received_Message_Nodes_ZOF>66</The_Number_of_Received_Message_Nodes_ZOF>
+        <The_Number_of_Received_Message_Nodes_ZOR>10</The_Number_of_Received_Message_Nodes_ZOR>
+        <The_Number_of_Received_Message_Nodes_ZOF>10</The_Number_of_Received_Message_Nodes_ZOF>
         <The_Number_of_Nodes_Which_Passing_Through_ZOR>68</The_Number_of_Nodes_Which_Passing_Through_ZOR>
         <The_Number_of_Nodes_Which_Passing_Through_ZOF>68</The_Number_of_Nodes_Which_Passing_Through_ZOF>
-        <The_Packet_Delivery_Ratio>0.970588</The_Packet_Delivery_Ratio>
-        <The_Max_Hops>6</The_Max_Hops>
-        <The_Max_Delay_Time>0.00706732</The_Max_Delay_Time>
+        <The_Packet_Delivery_Ratio>0.147059</The_Packet_Delivery_Ratio>
+        <The_Max_Hops>1</The_Max_Hops>
+        <The_Max_Delay_Time>0.00458666</The_Max_Delay_Time>
         <Delay_Time_Per_Hop>
-            <Delay_Time>0.00444449</Delay_Time>
-            <Delay_Time>0.00061766</Delay_Time>
-            <Delay_Time>0.000451059</Delay_Time>
-            <Delay_Time>0.00016711</Delay_Time>
-            <Delay_Time>0.000986402</Delay_Time>
-            <Delay_Time>0.000400604</Delay_Time>
+            <Delay_Time>0.00458666</Delay_Time>
         </Delay_Time_Per_Hop>
     </Network_Identification_Number>
     <Network_Identification_Number ID="11">
@@ -312,19 +272,15 @@
         <The_Shape_of_ZOF>1</The_Shape_of_ZOF>
         <The_Length_of_ZOF>840</The_Length_of_ZOF>
         <The_Width_of_ZOF>840</The_Width_of_ZOF>
-        <The_Number_of_Received_Message_Nodes_ZOR>44</The_Number_of_Received_Message_Nodes_ZOR>
-        <The_Number_of_Received_Message_Nodes_ZOF>44</The_Number_of_Received_Message_Nodes_ZOF>
+        <The_Number_of_Received_Message_Nodes_ZOR>14</The_Number_of_Received_Message_Nodes_ZOR>
+        <The_Number_of_Received_Message_Nodes_ZOF>14</The_Number_of_Received_Message_Nodes_ZOF>
         <The_Number_of_Nodes_Which_Passing_Through_ZOR>46</The_Number_of_Nodes_Which_Passing_Through_ZOR>
         <The_Number_of_Nodes_Which_Passing_Through_ZOF>46</The_Number_of_Nodes_Which_Passing_Through_ZOF>
-        <The_Packet_Delivery_Ratio>0.956522</The_Packet_Delivery_Ratio>
-        <The_Max_Hops>5</The_Max_Hops>
-        <The_Max_Delay_Time>0.00713582</The_Max_Delay_Time>
+        <The_Packet_Delivery_Ratio>0.304348</The_Packet_Delivery_Ratio>
+        <The_Max_Hops>1</The_Max_Hops>
+        <The_Max_Delay_Time>0.00457282</The_Max_Delay_Time>
         <Delay_Time_Per_Hop>
-            <Delay_Time>0.00443022</Delay_Time>
-            <Delay_Time>0.000463781</Delay_Time>
-            <Delay_Time>0.000167072</Delay_Time>
-            <Delay_Time>0.00133992</Delay_Time>
-            <Delay_Time>0.000734821</Delay_Time>
+            <Delay_Time>0.00457282</Delay_Time>
         </Delay_Time_Per_Hop>
     </Network_Identification_Number>
     <Network_Identification_Number ID="12">
@@ -339,20 +295,15 @@
         <The_Shape_of_ZOF>1</The_Shape_of_ZOF>
         <The_Length_of_ZOF>840</The_Length_of_ZOF>
         <The_Width_of_ZOF>840</The_Width_of_ZOF>
-        <The_Number_of_Received_Message_Nodes_ZOR>64</The_Number_of_Received_Message_Nodes_ZOR>
-        <The_Number_of_Received_Message_Nodes_ZOF>64</The_Number_of_Received_Message_Nodes_ZOF>
+        <The_Number_of_Received_Message_Nodes_ZOR>5</The_Number_of_Received_Message_Nodes_ZOR>
+        <The_Number_of_Received_Message_Nodes_ZOF>5</The_Number_of_Received_Message_Nodes_ZOF>
         <The_Number_of_Nodes_Which_Passing_Through_ZOR>66</The_Number_of_Nodes_Which_Passing_Through_ZOR>
         <The_Number_of_Nodes_Which_Passing_Through_ZOF>66</The_Number_of_Nodes_Which_Passing_Through_ZOF>
-        <The_Packet_Delivery_Ratio>0.969697</The_Packet_Delivery_Ratio>
-        <The_Max_Hops>6</The_Max_Hops>
-        <The_Max_Delay_Time>0.0081962</The_Max_Delay_Time>
+        <The_Packet_Delivery_Ratio>0.0757576</The_Packet_Delivery_Ratio>
+        <The_Max_Hops>1</The_Max_Hops>
+        <The_Max_Delay_Time>0.00433356</The_Max_Delay_Time>
         <Delay_Time_Per_Hop>
-            <Delay_Time>0.00447658</Delay_Time>
-            <Delay_Time>0.00115045</Delay_Time>
-            <Delay_Time>0.000578462</Delay_Time>
-            <Delay_Time>0.000166706</Delay_Time>
-            <Delay_Time>0.000167369</Delay_Time>
-            <Delay_Time>0.00165663</Delay_Time>
+            <Delay_Time>0.00433356</Delay_Time>
         </Delay_Time_Per_Hop>
     </Network_Identification_Number>
     <Network_Identification_Number ID="13">
@@ -367,20 +318,15 @@
         <The_Shape_of_ZOF>1</The_Shape_of_ZOF>
         <The_Length_of_ZOF>840</The_Length_of_ZOF>
         <The_Width_of_ZOF>840</The_Width_of_ZOF>
-        <The_Number_of_Received_Message_Nodes_ZOR>43</The_Number_of_Received_Message_Nodes_ZOR>
-        <The_Number_of_Received_Message_Nodes_ZOF>43</The_Number_of_Received_Message_Nodes_ZOF>
+        <The_Number_of_Received_Message_Nodes_ZOR>16</The_Number_of_Received_Message_Nodes_ZOR>
+        <The_Number_of_Received_Message_Nodes_ZOF>16</The_Number_of_Received_Message_Nodes_ZOF>
         <The_Number_of_Nodes_Which_Passing_Through_ZOR>46</The_Number_of_Nodes_Which_Passing_Through_ZOR>
         <The_Number_of_Nodes_Which_Passing_Through_ZOF>46</The_Number_of_Nodes_Which_Passing_Through_ZOF>
-        <The_Packet_Delivery_Ratio>0.934783</The_Packet_Delivery_Ratio>
-        <The_Max_Hops>6</The_Max_Hops>
-        <The_Max_Delay_Time>0.0101236</The_Max_Delay_Time>
+        <The_Packet_Delivery_Ratio>0.347826</The_Packet_Delivery_Ratio>
+        <The_Max_Hops>1</The_Max_Hops>
+        <The_Max_Delay_Time>0.00440053</The_Max_Delay_Time>
         <Delay_Time_Per_Hop>
-            <Delay_Time>0.00440071</Delay_Time>
-            <Delay_Time>0.000348787</Delay_Time>
-            <Delay_Time>0.000167427</Delay_Time>
-            <Delay_Time>0.0019318</Delay_Time>
-            <Delay_Time>0.00152227</Delay_Time>
-            <Delay_Time>0.0017526</Delay_Time>
+            <Delay_Time>0.00440053</Delay_Time>
         </Delay_Time_Per_Hop>
     </Network_Identification_Number>
     <Network_Identification_Number ID="14">
@@ -395,20 +341,15 @@
         <The_Shape_of_ZOF>1</The_Shape_of_ZOF>
         <The_Length_of_ZOF>840</The_Length_of_ZOF>
         <The_Width_of_ZOF>840</The_Width_of_ZOF>
-        <The_Number_of_Received_Message_Nodes_ZOR>63</The_Number_of_Received_Message_Nodes_ZOR>
-        <The_Number_of_Received_Message_Nodes_ZOF>63</The_Number_of_Received_Message_Nodes_ZOF>
+        <The_Number_of_Received_Message_Nodes_ZOR>9</The_Number_of_Received_Message_Nodes_ZOR>
+        <The_Number_of_Received_Message_Nodes_ZOF>9</The_Number_of_Received_Message_Nodes_ZOF>
         <The_Number_of_Nodes_Which_Passing_Through_ZOR>65</The_Number_of_Nodes_Which_Passing_Through_ZOR>
         <The_Number_of_Nodes_Which_Passing_Through_ZOF>65</The_Number_of_Nodes_Which_Passing_Through_ZOF>
-        <The_Packet_Delivery_Ratio>0.969231</The_Packet_Delivery_Ratio>
-        <The_Max_Hops>6</The_Max_Hops>
-        <The_Max_Delay_Time>0.00874502</The_Max_Delay_Time>
+        <The_Packet_Delivery_Ratio>0.138462</The_Packet_Delivery_Ratio>
+        <The_Max_Hops>1</The_Max_Hops>
+        <The_Max_Delay_Time>0.00452404</The_Max_Delay_Time>
         <Delay_Time_Per_Hop>
-            <Delay_Time>0.00443368</Delay_Time>
-            <Delay_Time>0.00164888</Delay_Time>
-            <Delay_Time>0.00113969</Delay_Time>
-            <Delay_Time>0.000232112</Delay_Time>
-            <Delay_Time>0.000167159</Delay_Time>
-            <Delay_Time>0.00112349</Delay_Time>
+            <Delay_Time>0.00452404</Delay_Time>
         </Delay_Time_Per_Hop>
     </Network_Identification_Number>
     <Network_Identification_Number ID="15">
@@ -423,16 +364,15 @@
         <The_Shape_of_ZOF>1</The_Shape_of_ZOF>
         <The_Length_of_ZOF>840</The_Length_of_ZOF>
         <The_Width_of_ZOF>840</The_Width_of_ZOF>
-        <The_Number_of_Received_Message_Nodes_ZOR>21</The_Number_of_Received_Message_Nodes_ZOR>
-        <The_Number_of_Received_Message_Nodes_ZOF>21</The_Number_of_Received_Message_Nodes_ZOF>
+        <The_Number_of_Received_Message_Nodes_ZOR>12</The_Number_of_Received_Message_Nodes_ZOR>
+        <The_Number_of_Received_Message_Nodes_ZOF>12</The_Number_of_Received_Message_Nodes_ZOF>
         <The_Number_of_Nodes_Which_Passing_Through_ZOR>25</The_Number_of_Nodes_Which_Passing_Through_ZOR>
         <The_Number_of_Nodes_Which_Passing_Through_ZOF>25</The_Number_of_Nodes_Which_Passing_Through_ZOF>
-        <The_Packet_Delivery_Ratio>0.84</The_Packet_Delivery_Ratio>
-        <The_Max_Hops>2</The_Max_Hops>
-        <The_Max_Delay_Time>0.00561027</The_Max_Delay_Time>
+        <The_Packet_Delivery_Ratio>0.48</The_Packet_Delivery_Ratio>
+        <The_Max_Hops>1</The_Max_Hops>
+        <The_Max_Delay_Time>0.00432082</The_Max_Delay_Time>
         <Delay_Time_Per_Hop>
-            <Delay_Time>0.00432145</Delay_Time>
-            <Delay_Time>0.00128882</Delay_Time>
+            <Delay_Time>0.00432082</Delay_Time>
         </Delay_Time_Per_Hop>
     </Network_Identification_Number>
     <Network_Identification_Number ID="16">
@@ -447,19 +387,15 @@
         <The_Shape_of_ZOF>1</The_Shape_of_ZOF>
         <The_Length_of_ZOF>840</The_Length_of_ZOF>
         <The_Width_of_ZOF>840</The_Width_of_ZOF>
-        <The_Number_of_Received_Message_Nodes_ZOR>56</The_Number_of_Received_Message_Nodes_ZOR>
-        <The_Number_of_Received_Message_Nodes_ZOF>56</The_Number_of_Received_Message_Nodes_ZOF>
+        <The_Number_of_Received_Message_Nodes_ZOR>3</The_Number_of_Received_Message_Nodes_ZOR>
+        <The_Number_of_Received_Message_Nodes_ZOF>3</The_Number_of_Received_Message_Nodes_ZOF>
         <The_Number_of_Nodes_Which_Passing_Through_ZOR>57</The_Number_of_Nodes_Which_Passing_Through_ZOR>
         <The_Number_of_Nodes_Which_Passing_Through_ZOF>57</The_Number_of_Nodes_Which_Passing_Through_ZOF>
-        <The_Packet_Delivery_Ratio>0.982456</The_Packet_Delivery_Ratio>
-        <The_Max_Hops>5</The_Max_Hops>
-        <The_Max_Delay_Time>0.00968441</The_Max_Delay_Time>
+        <The_Packet_Delivery_Ratio>0.0526316</The_Packet_Delivery_Ratio>
+        <The_Max_Hops>1</The_Max_Hops>
+        <The_Max_Delay_Time>0.00427051</The_Max_Delay_Time>
         <Delay_Time_Per_Hop>
-            <Delay_Time>0.00434851</Delay_Time>
-            <Delay_Time>0.00104784</Delay_Time>
-            <Delay_Time>0.00142538</Delay_Time>
-            <Delay_Time>0.0017468</Delay_Time>
-            <Delay_Time>0.00111588</Delay_Time>
+            <Delay_Time>0.00427051</Delay_Time>
         </Delay_Time_Per_Hop>
     </Network_Identification_Number>
     <Network_Identification_Number ID="17">
@@ -474,20 +410,15 @@
         <The_Shape_of_ZOF>1</The_Shape_of_ZOF>
         <The_Length_of_ZOF>840</The_Length_of_ZOF>
         <The_Width_of_ZOF>840</The_Width_of_ZOF>
-        <The_Number_of_Received_Message_Nodes_ZOR>46</The_Number_of_Received_Message_Nodes_ZOR>
-        <The_Number_of_Received_Message_Nodes_ZOF>46</The_Number_of_Received_Message_Nodes_ZOF>
+        <The_Number_of_Received_Message_Nodes_ZOR>13</The_Number_of_Received_Message_Nodes_ZOR>
+        <The_Number_of_Received_Message_Nodes_ZOF>13</The_Number_of_Received_Message_Nodes_ZOF>
         <The_Number_of_Nodes_Which_Passing_Through_ZOR>48</The_Number_of_Nodes_Which_Passing_Through_ZOR>
         <The_Number_of_Nodes_Which_Passing_Through_ZOF>48</The_Number_of_Nodes_Which_Passing_Through_ZOF>
-        <The_Packet_Delivery_Ratio>0.958333</The_Packet_Delivery_Ratio>
-        <The_Max_Hops>6</The_Max_Hops>
-        <The_Max_Delay_Time>0.00767897</The_Max_Delay_Time>
+        <The_Packet_Delivery_Ratio>0.270833</The_Packet_Delivery_Ratio>
+        <The_Max_Hops>1</The_Max_Hops>
+        <The_Max_Delay_Time>0.00444615</The_Max_Delay_Time>
         <Delay_Time_Per_Hop>
-            <Delay_Time>0.00439495</Delay_Time>
-            <Delay_Time>0.000439842</Delay_Time>
-            <Delay_Time>0.00036189</Delay_Time>
-            <Delay_Time>0.000501069</Delay_Time>
-            <Delay_Time>0.000583404</Delay_Time>
-            <Delay_Time>0.00139782</Delay_Time>
+            <Delay_Time>0.00444615</Delay_Time>
         </Delay_Time_Per_Hop>
     </Network_Identification_Number>
     <Network_Identification_Number ID="18">
@@ -502,20 +433,15 @@
         <The_Shape_of_ZOF>1</The_Shape_of_ZOF>
         <The_Length_of_ZOF>840</The_Length_of_ZOF>
         <The_Width_of_ZOF>840</The_Width_of_ZOF>
-        <The_Number_of_Received_Message_Nodes_ZOR>50</The_Number_of_Received_Message_Nodes_ZOR>
-        <The_Number_of_Received_Message_Nodes_ZOF>50</The_Number_of_Received_Message_Nodes_ZOF>
+        <The_Number_of_Received_Message_Nodes_ZOR>16</The_Number_of_Received_Message_Nodes_ZOR>
+        <The_Number_of_Received_Message_Nodes_ZOF>16</The_Number_of_Received_Message_Nodes_ZOF>
         <The_Number_of_Nodes_Which_Passing_Through_ZOR>51</The_Number_of_Nodes_Which_Passing_Through_ZOR>
         <The_Number_of_Nodes_Which_Passing_Through_ZOF>51</The_Number_of_Nodes_Which_Passing_Through_ZOF>
-        <The_Packet_Delivery_Ratio>0.980392</The_Packet_Delivery_Ratio>
-        <The_Max_Hops>6</The_Max_Hops>
-        <The_Max_Delay_Time>0.00953937</The_Max_Delay_Time>
+        <The_Packet_Delivery_Ratio>0.313725</The_Packet_Delivery_Ratio>
+        <The_Max_Hops>1</The_Max_Hops>
+        <The_Max_Delay_Time>0.00446342</The_Max_Delay_Time>
         <Delay_Time_Per_Hop>
-            <Delay_Time>0.00445105</Delay_Time>
-            <Delay_Time>0.000570107</Delay_Time>
-            <Delay_Time>0.0012643</Delay_Time>
-            <Delay_Time>0.00131032</Delay_Time>
-            <Delay_Time>0.000478733</Delay_Time>
-            <Delay_Time>0.00146486</Delay_Time>
+            <Delay_Time>0.00446342</Delay_Time>
         </Delay_Time_Per_Hop>
     </Network_Identification_Number>
     <Network_Identification_Number ID="19">
@@ -530,20 +456,15 @@
         <The_Shape_of_ZOF>1</The_Shape_of_ZOF>
         <The_Length_of_ZOF>840</The_Length_of_ZOF>
         <The_Width_of_ZOF>840</The_Width_of_ZOF>
-        <The_Number_of_Received_Message_Nodes_ZOR>51</The_Number_of_Received_Message_Nodes_ZOR>
-        <The_Number_of_Received_Message_Nodes_ZOF>51</The_Number_of_Received_Message_Nodes_ZOF>
+        <The_Number_of_Received_Message_Nodes_ZOR>5</The_Number_of_Received_Message_Nodes_ZOR>
+        <The_Number_of_Received_Message_Nodes_ZOF>5</The_Number_of_Received_Message_Nodes_ZOF>
         <The_Number_of_Nodes_Which_Passing_Through_ZOR>53</The_Number_of_Nodes_Which_Passing_Through_ZOR>
         <The_Number_of_Nodes_Which_Passing_Through_ZOF>53</The_Number_of_Nodes_Which_Passing_Through_ZOF>
-        <The_Packet_Delivery_Ratio>0.962264</The_Packet_Delivery_Ratio>
-        <The_Max_Hops>6</The_Max_Hops>
-        <The_Max_Delay_Time>0.00850906</The_Max_Delay_Time>
+        <The_Packet_Delivery_Ratio>0.0943396</The_Packet_Delivery_Ratio>
+        <The_Max_Hops>1</The_Max_Hops>
+        <The_Max_Delay_Time>0.00450339</The_Max_Delay_Time>
         <Delay_Time_Per_Hop>
-            <Delay_Time>0.00462039</Delay_Time>
-            <Delay_Time>0.00131973</Delay_Time>
-            <Delay_Time>0.000245301</Delay_Time>
-            <Delay_Time>0.000569635</Delay_Time>
-            <Delay_Time>0.000778188</Delay_Time>
-            <Delay_Time>0.000975819</Delay_Time>
+            <Delay_Time>0.00450339</Delay_Time>
         </Delay_Time_Per_Hop>
     </Network_Identification_Number>
     <Network_Identification_Number ID="20">
@@ -558,19 +479,15 @@
         <The_Shape_of_ZOF>1</The_Shape_of_ZOF>
         <The_Length_of_ZOF>840</The_Length_of_ZOF>
         <The_Width_of_ZOF>840</The_Width_of_ZOF>
-        <The_Number_of_Received_Message_Nodes_ZOR>36</The_Number_of_Received_Message_Nodes_ZOR>
-        <The_Number_of_Received_Message_Nodes_ZOF>36</The_Number_of_Received_Message_Nodes_ZOF>
+        <The_Number_of_Received_Message_Nodes_ZOR>4</The_Number_of_Received_Message_Nodes_ZOR>
+        <The_Number_of_Received_Message_Nodes_ZOF>4</The_Number_of_Received_Message_Nodes_ZOF>
         <The_Number_of_Nodes_Which_Passing_Through_ZOR>40</The_Number_of_Nodes_Which_Passing_Through_ZOR>
         <The_Number_of_Nodes_Which_Passing_Through_ZOF>40</The_Number_of_Nodes_Which_Passing_Through_ZOF>
-        <The_Packet_Delivery_Ratio>0.9</The_Packet_Delivery_Ratio>
-        <The_Max_Hops>5</The_Max_Hops>
-        <The_Max_Delay_Time>0.0105494</The_Max_Delay_Time>
+        <The_Packet_Delivery_Ratio>0.1</The_Packet_Delivery_Ratio>
+        <The_Max_Hops>1</The_Max_Hops>
+        <The_Max_Delay_Time>0.00424811</The_Max_Delay_Time>
         <Delay_Time_Per_Hop>
-            <Delay_Time>0.00431354</Delay_Time>
-            <Delay_Time>0.00186375</Delay_Time>
-            <Delay_Time>0.00168796</Delay_Time>
-            <Delay_Time>0.00143857</Delay_Time>
-            <Delay_Time>0.0012456</Delay_Time>
+            <Delay_Time>0.00424811</Delay_Time>
         </Delay_Time_Per_Hop>
     </Network_Identification_Number>
     <Network_Identification_Number ID="21">
@@ -585,19 +502,15 @@
         <The_Shape_of_ZOF>1</The_Shape_of_ZOF>
         <The_Length_of_ZOF>840</The_Length_of_ZOF>
         <The_Width_of_ZOF>840</The_Width_of_ZOF>
-        <The_Number_of_Received_Message_Nodes_ZOR>40</The_Number_of_Received_Message_Nodes_ZOR>
-        <The_Number_of_Received_Message_Nodes_ZOF>40</The_Number_of_Received_Message_Nodes_ZOF>
+        <The_Number_of_Received_Message_Nodes_ZOR>4</The_Number_of_Received_Message_Nodes_ZOR>
+        <The_Number_of_Received_Message_Nodes_ZOF>4</The_Number_of_Received_Message_Nodes_ZOF>
         <The_Number_of_Nodes_Which_Passing_Through_ZOR>44</The_Number_of_Nodes_Which_Passing_Through_ZOR>
         <The_Number_of_Nodes_Which_Passing_Through_ZOF>44</The_Number_of_Nodes_Which_Passing_Through_ZOF>
-        <The_Packet_Delivery_Ratio>0.909091</The_Packet_Delivery_Ratio>
-        <The_Max_Hops>5</The_Max_Hops>
-        <The_Max_Delay_Time>0.00842234</The_Max_Delay_Time>
+        <The_Packet_Delivery_Ratio>0.0909091</The_Packet_Delivery_Ratio>
+        <The_Max_Hops>1</The_Max_Hops>
+        <The_Max_Delay_Time>0.00427166</The_Max_Delay_Time>
         <Delay_Time_Per_Hop>
-            <Delay_Time>0.00431086</Delay_Time>
-            <Delay_Time>0.000712715</Delay_Time>
-            <Delay_Time>0.00115343</Delay_Time>
-            <Delay_Time>0.00107668</Delay_Time>
-            <Delay_Time>0.00116865</Delay_Time>
+            <Delay_Time>0.00427166</Delay_Time>
         </Delay_Time_Per_Hop>
     </Network_Identification_Number>
     <Network_Identification_Number ID="22">
@@ -612,20 +525,15 @@
         <The_Shape_of_ZOF>1</The_Shape_of_ZOF>
         <The_Length_of_ZOF>840</The_Length_of_ZOF>
         <The_Width_of_ZOF>840</The_Width_of_ZOF>
-        <The_Number_of_Received_Message_Nodes_ZOR>46</The_Number_of_Received_Message_Nodes_ZOR>
-        <The_Number_of_Received_Message_Nodes_ZOF>46</The_Number_of_Received_Message_Nodes_ZOF>
+        <The_Number_of_Received_Message_Nodes_ZOR>6</The_Number_of_Received_Message_Nodes_ZOR>
+        <The_Number_of_Received_Message_Nodes_ZOF>6</The_Number_of_Received_Message_Nodes_ZOF>
         <The_Number_of_Nodes_Which_Passing_Through_ZOR>47</The_Number_of_Nodes_Which_Passing_Through_ZOR>
         <The_Number_of_Nodes_Which_Passing_Through_ZOF>47</The_Number_of_Nodes_Which_Passing_Through_ZOF>
-        <The_Packet_Delivery_Ratio>0.978723</The_Packet_Delivery_Ratio>
-        <The_Max_Hops>6</The_Max_Hops>
-        <The_Max_Delay_Time>0.00906741</The_Max_Delay_Time>
+        <The_Packet_Delivery_Ratio>0.12766</The_Packet_Delivery_Ratio>
+        <The_Max_Hops>1</The_Max_Hops>
+        <The_Max_Delay_Time>0.0043752</The_Max_Delay_Time>
         <Delay_Time_Per_Hop>
-            <Delay_Time>0.0044402</Delay_Time>
-            <Delay_Time>0.00131885</Delay_Time>
-            <Delay_Time>0.000972847</Delay_Time>
-            <Delay_Time>0.000333603</Delay_Time>
-            <Delay_Time>0.00109673</Delay_Time>
-            <Delay_Time>0.000905181</Delay_Time>
+            <Delay_Time>0.0043752</Delay_Time>
         </Delay_Time_Per_Hop>
     </Network_Identification_Number>
     <Network_Identification_Number ID="23">
@@ -640,20 +548,15 @@
         <The_Shape_of_ZOF>1</The_Shape_of_ZOF>
         <The_Length_of_ZOF>840</The_Length_of_ZOF>
         <The_Width_of_ZOF>840</The_Width_of_ZOF>
-        <The_Number_of_Received_Message_Nodes_ZOR>56</The_Number_of_Received_Message_Nodes_ZOR>
-        <The_Number_of_Received_Message_Nodes_ZOF>56</The_Number_of_Received_Message_Nodes_ZOF>
+        <The_Number_of_Received_Message_Nodes_ZOR>6</The_Number_of_Received_Message_Nodes_ZOR>
+        <The_Number_of_Received_Message_Nodes_ZOF>6</The_Number_of_Received_Message_Nodes_ZOF>
         <The_Number_of_Nodes_Which_Passing_Through_ZOR>58</The_Number_of_Nodes_Which_Passing_Through_ZOR>
         <The_Number_of_Nodes_Which_Passing_Through_ZOF>58</The_Number_of_Nodes_Which_Passing_Through_ZOF>
-        <The_Packet_Delivery_Ratio>0.965517</The_Packet_Delivery_Ratio>
-        <The_Max_Hops>6</The_Max_Hops>
-        <The_Max_Delay_Time>0.007723</The_Max_Delay_Time>
+        <The_Packet_Delivery_Ratio>0.103448</The_Packet_Delivery_Ratio>
+        <The_Max_Hops>1</The_Max_Hops>
+        <The_Max_Delay_Time>0.00429246</The_Max_Delay_Time>
         <Delay_Time_Per_Hop>
-            <Delay_Time>0.00421484</Delay_Time>
-            <Delay_Time>0.000167341</Delay_Time>
-            <Delay_Time>0.000452906</Delay_Time>
-            <Delay_Time>0.000876979</Delay_Time>
-            <Delay_Time>0.00105747</Delay_Time>
-            <Delay_Time>0.000953462</Delay_Time>
+            <Delay_Time>0.00429246</Delay_Time>
         </Delay_Time_Per_Hop>
     </Network_Identification_Number>
     <Network_Identification_Number ID="24">
@@ -668,19 +571,15 @@
         <The_Shape_of_ZOF>1</The_Shape_of_ZOF>
         <The_Length_of_ZOF>840</The_Length_of_ZOF>
         <The_Width_of_ZOF>840</The_Width_of_ZOF>
-        <The_Number_of_Received_Message_Nodes_ZOR>65</The_Number_of_Received_Message_Nodes_ZOR>
-        <The_Number_of_Received_Message_Nodes_ZOF>65</The_Number_of_Received_Message_Nodes_ZOF>
+        <The_Number_of_Received_Message_Nodes_ZOR>5</The_Number_of_Received_Message_Nodes_ZOR>
+        <The_Number_of_Received_Message_Nodes_ZOF>5</The_Number_of_Received_Message_Nodes_ZOF>
         <The_Number_of_Nodes_Which_Passing_Through_ZOR>67</The_Number_of_Nodes_Which_Passing_Through_ZOR>
         <The_Number_of_Nodes_Which_Passing_Through_ZOF>67</The_Number_of_Nodes_Which_Passing_Through_ZOF>
-        <The_Packet_Delivery_Ratio>0.970149</The_Packet_Delivery_Ratio>
-        <The_Max_Hops>5</The_Max_Hops>
-        <The_Max_Delay_Time>0.00750411</The_Max_Delay_Time>
+        <The_Packet_Delivery_Ratio>0.0746269</The_Packet_Delivery_Ratio>
+        <The_Max_Hops>1</The_Max_Hops>
+        <The_Max_Delay_Time>0.00424169</The_Max_Delay_Time>
         <Delay_Time_Per_Hop>
-            <Delay_Time>0.00420304</Delay_Time>
-            <Delay_Time>0.000791072</Delay_Time>
-            <Delay_Time>0.000644611</Delay_Time>
-            <Delay_Time>0.000219109</Delay_Time>
-            <Delay_Time>0.00164628</Delay_Time>
+            <Delay_Time>0.00424169</Delay_Time>
         </Delay_Time_Per_Hop>
     </Network_Identification_Number>
     <Network_Identification_Number ID="25">
@@ -695,19 +594,15 @@
         <The_Shape_of_ZOF>1</The_Shape_of_ZOF>
         <The_Length_of_ZOF>840</The_Length_of_ZOF>
         <The_Width_of_ZOF>840</The_Width_of_ZOF>
-        <The_Number_of_Received_Message_Nodes_ZOR>51</The_Number_of_Received_Message_Nodes_ZOR>
-        <The_Number_of_Received_Message_Nodes_ZOF>51</The_Number_of_Received_Message_Nodes_ZOF>
+        <The_Number_of_Received_Message_Nodes_ZOR>6</The_Number_of_Received_Message_Nodes_ZOR>
+        <The_Number_of_Received_Message_Nodes_ZOF>6</The_Number_of_Received_Message_Nodes_ZOF>
         <The_Number_of_Nodes_Which_Passing_Through_ZOR>53</The_Number_of_Nodes_Which_Passing_Through_ZOR>
         <The_Number_of_Nodes_Which_Passing_Through_ZOF>53</The_Number_of_Nodes_Which_Passing_Through_ZOF>
-        <The_Packet_Delivery_Ratio>0.962264</The_Packet_Delivery_Ratio>
-        <The_Max_Hops>5</The_Max_Hops>
-        <The_Max_Delay_Time>0.00676571</The_Max_Delay_Time>
+        <The_Packet_Delivery_Ratio>0.113208</The_Packet_Delivery_Ratio>
+        <The_Max_Hops>1</The_Max_Hops>
+        <The_Max_Delay_Time>0.00440268</The_Max_Delay_Time>
         <Delay_Time_Per_Hop>
-            <Delay_Time>0.00441617</Delay_Time>
-            <Delay_Time>0.00064578</Delay_Time>
-            <Delay_Time>0.000984278</Delay_Time>
-            <Delay_Time>0.000333554</Delay_Time>
-            <Delay_Time>0.000385928</Delay_Time>
+            <Delay_Time>0.00440268</Delay_Time>
         </Delay_Time_Per_Hop>
     </Network_Identification_Number>
     <Network_Identification_Number ID="26">
@@ -722,19 +617,15 @@
         <The_Shape_of_ZOF>1</The_Shape_of_ZOF>
         <The_Length_of_ZOF>840</The_Length_of_ZOF>
         <The_Width_of_ZOF>840</The_Width_of_ZOF>
-        <The_Number_of_Received_Message_Nodes_ZOR>65</The_Number_of_Received_Message_Nodes_ZOR>
-        <The_Number_of_Received_Message_Nodes_ZOF>65</The_Number_of_Received_Message_Nodes_ZOF>
+        <The_Number_of_Received_Message_Nodes_ZOR>6</The_Number_of_Received_Message_Nodes_ZOR>
+        <The_Number_of_Received_Message_Nodes_ZOF>6</The_Number_of_Received_Message_Nodes_ZOF>
         <The_Number_of_Nodes_Which_Passing_Through_ZOR>67</The_Number_of_Nodes_Which_Passing_Through_ZOR>
         <The_Number_of_Nodes_Which_Passing_Through_ZOF>67</The_Number_of_Nodes_Which_Passing_Through_ZOF>
-        <The_Packet_Delivery_Ratio>0.970149</The_Packet_Delivery_Ratio>
-        <The_Max_Hops>5</The_Max_Hops>
-        <The_Max_Delay_Time>0.00857751</The_Max_Delay_Time>
+        <The_Packet_Delivery_Ratio>0.0895522</The_Packet_Delivery_Ratio>
+        <The_Max_Hops>1</The_Max_Hops>
+        <The_Max_Delay_Time>0.00443964</The_Max_Delay_Time>
         <Delay_Time_Per_Hop>
-            <Delay_Time>0.00434887</Delay_Time>
-            <Delay_Time>0.0019296</Delay_Time>
-            <Delay_Time>0.00102982</Delay_Time>
-            <Delay_Time>0.000725703</Delay_Time>
-            <Delay_Time>0.000543509</Delay_Time>
+            <Delay_Time>0.00443964</Delay_Time>
         </Delay_Time_Per_Hop>
     </Network_Identification_Number>
     <Network_Identification_Number ID="27">
@@ -749,20 +640,15 @@
         <The_Shape_of_ZOF>1</The_Shape_of_ZOF>
         <The_Length_of_ZOF>840</The_Length_of_ZOF>
         <The_Width_of_ZOF>840</The_Width_of_ZOF>
-        <The_Number_of_Received_Message_Nodes_ZOR>39</The_Number_of_Received_Message_Nodes_ZOR>
-        <The_Number_of_Received_Message_Nodes_ZOF>39</The_Number_of_Received_Message_Nodes_ZOF>
+        <The_Number_of_Received_Message_Nodes_ZOR>3</The_Number_of_Received_Message_Nodes_ZOR>
+        <The_Number_of_Received_Message_Nodes_ZOF>3</The_Number_of_Received_Message_Nodes_ZOF>
         <The_Number_of_Nodes_Which_Passing_Through_ZOR>44</The_Number_of_Nodes_Which_Passing_Through_ZOR>
         <The_Number_of_Nodes_Which_Passing_Through_ZOF>44</The_Number_of_Nodes_Which_Passing_Through_ZOF>
-        <The_Packet_Delivery_Ratio>0.886364</The_Packet_Delivery_Ratio>
-        <The_Max_Hops>6</The_Max_Hops>
-        <The_Max_Delay_Time>0.00796682</The_Max_Delay_Time>
+        <The_Packet_Delivery_Ratio>0.0681818</The_Packet_Delivery_Ratio>
+        <The_Max_Hops>1</The_Max_Hops>
+        <The_Max_Delay_Time>0.00432872</The_Max_Delay_Time>
         <Delay_Time_Per_Hop>
-            <Delay_Time>0.00462367</Delay_Time>
-            <Delay_Time>0.000869195</Delay_Time>
-            <Delay_Time>0.00125058</Delay_Time>
-            <Delay_Time>0.000296826</Delay_Time>
-            <Delay_Time>0.000333567</Delay_Time>
-            <Delay_Time>0.000592978</Delay_Time>
+            <Delay_Time>0.00432872</Delay_Time>
         </Delay_Time_Per_Hop>
     </Network_Identification_Number>
     <Network_Identification_Number ID="28">
@@ -777,18 +663,15 @@
         <The_Shape_of_ZOF>1</The_Shape_of_ZOF>
         <The_Length_of_ZOF>840</The_Length_of_ZOF>
         <The_Width_of_ZOF>840</The_Width_of_ZOF>
-        <The_Number_of_Received_Message_Nodes_ZOR>55</The_Number_of_Received_Message_Nodes_ZOR>
-        <The_Number_of_Received_Message_Nodes_ZOF>55</The_Number_of_Received_Message_Nodes_ZOF>
+        <The_Number_of_Received_Message_Nodes_ZOR>17</The_Number_of_Received_Message_Nodes_ZOR>
+        <The_Number_of_Received_Message_Nodes_ZOF>17</The_Number_of_Received_Message_Nodes_ZOF>
         <The_Number_of_Nodes_Which_Passing_Through_ZOR>56</The_Number_of_Nodes_Which_Passing_Through_ZOR>
         <The_Number_of_Nodes_Which_Passing_Through_ZOF>56</The_Number_of_Nodes_Which_Passing_Through_ZOF>
-        <The_Packet_Delivery_Ratio>0.982143</The_Packet_Delivery_Ratio>
-        <The_Max_Hops>4</The_Max_Hops>
-        <The_Max_Delay_Time>0.00543703</The_Max_Delay_Time>
+        <The_Packet_Delivery_Ratio>0.303571</The_Packet_Delivery_Ratio>
+        <The_Max_Hops>1</The_Max_Hops>
+        <The_Max_Delay_Time>0.00440716</The_Max_Delay_Time>
         <Delay_Time_Per_Hop>
-            <Delay_Time>0.00458772</Delay_Time>
-            <Delay_Time>0.00019308</Delay_Time>
-            <Delay_Time>0.000180034</Delay_Time>
-            <Delay_Time>0.000476197</Delay_Time>
+            <Delay_Time>0.00440716</Delay_Time>
         </Delay_Time_Per_Hop>
     </Network_Identification_Number>
     <Network_Identification_Number ID="29">
@@ -803,19 +686,15 @@
         <The_Shape_of_ZOF>1</The_Shape_of_ZOF>
         <The_Length_of_ZOF>840</The_Length_of_ZOF>
         <The_Width_of_ZOF>840</The_Width_of_ZOF>
-        <The_Number_of_Received_Message_Nodes_ZOR>74</The_Number_of_Received_Message_Nodes_ZOR>
-        <The_Number_of_Received_Message_Nodes_ZOF>74</The_Number_of_Received_Message_Nodes_ZOF>
+        <The_Number_of_Received_Message_Nodes_ZOR>19</The_Number_of_Received_Message_Nodes_ZOR>
+        <The_Number_of_Received_Message_Nodes_ZOF>19</The_Number_of_Received_Message_Nodes_ZOF>
         <The_Number_of_Nodes_Which_Passing_Through_ZOR>75</The_Number_of_Nodes_Which_Passing_Through_ZOR>
         <The_Number_of_Nodes_Which_Passing_Through_ZOF>75</The_Number_of_Nodes_Which_Passing_Through_ZOF>
-        <The_Packet_Delivery_Ratio>0.986667</The_Packet_Delivery_Ratio>
-        <The_Max_Hops>5</The_Max_Hops>
-        <The_Max_Delay_Time>0.00642844</The_Max_Delay_Time>
+        <The_Packet_Delivery_Ratio>0.253333</The_Packet_Delivery_Ratio>
+        <The_Max_Hops>1</The_Max_Hops>
+        <The_Max_Delay_Time>0.00447122</The_Max_Delay_Time>
         <Delay_Time_Per_Hop>
-            <Delay_Time>0.00460181</Delay_Time>
-            <Delay_Time>0.000333528</Delay_Time>
-            <Delay_Time>0.000670411</Delay_Time>
-            <Delay_Time>0.00056499</Delay_Time>
-            <Delay_Time>0.000257695</Delay_Time>
+            <Delay_Time>0.00447122</Delay_Time>
         </Delay_Time_Per_Hop>
     </Network_Identification_Number>
 </Protocol>

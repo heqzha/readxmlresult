@@ -22,7 +22,7 @@ function varargout = Main(varargin)
 
 % Edit the above text to modify the response to help Main
 
-% Last Modified by GUIDE v2.5 10-Jun-2014 06:00:55
+% Last Modified by GUIDE v2.5 12-Jun-2014 01:04:16
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -334,6 +334,8 @@ global_vehi_density = global_handle.global_vehi_density;
 global_zor_zof_range = global_handle.global_zor_zof_range;
 global_buid_distance = global_handle.global_buid_distance;
 
+edit_accept_delay_time = str2num(get(handles.edit2, 'String'))/1000.0;
+
 % Get result files path.
 clear global;
 [pathstruct,pathstr] = dirext('results', '[a-zA-z]+.xml$');
@@ -343,7 +345,7 @@ for index = 1:length(pathstr)
     [ scenario_name,  scenario_param, protocol_name] = analysisPath(path);
     % Get result data.
     protocol_data = parseXML(path);
-    [ delay_time_per_hop, packet_delivery_success_ratio, packet_delivery_efficiency, std_delay_time_per_hop ] = getPerformMetrics( protocol_data, global_accept_delay_time );
+    [ delay_time_per_hop, packet_delivery_success_ratio, packet_delivery_efficiency, std_delay_time_per_hop ] = getPerformMetrics( protocol_data, edit_accept_delay_time );
     
     %check data of the protocol exist or not.
     tf = isKey(global_protocols, protocol_name);
@@ -389,3 +391,26 @@ global_handle.global_protocols = global_protocols;
 global_handle.global_protocols_keys = global_protocols_keys;
 set(handles.pushbutton4, 'UserData', global_handle);
 set(handles.text6, 'String','Loading Done.');
+
+
+
+function edit2_Callback(hObject, eventdata, handles)
+% hObject    handle to edit2 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of edit2 as text
+%        str2double(get(hObject,'String')) returns contents of edit2 as a double
+
+
+% --- Executes during object creation, after setting all properties.
+function edit2_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to edit2 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
