@@ -4,6 +4,8 @@ classdef protocol < hgsetget
     
     properties
         name
+        packet_delivery_time
+        number_hops
         delay_time_per_hop
         packet_delivery_success_ratio
         packet_delivery_efficiency
@@ -56,6 +58,14 @@ classdef protocol < hgsetget
             end
         end        
         
+        function obj = set.packet_delivery_time(obj, val)
+            obj.packet_delivery_time = val;
+        end
+        
+        function obj = set.number_hops(obj, val)
+           obj.number_hops = val; 
+        end
+        
         function obj = set.delay_time_per_hop(obj, val)
             obj.delay_time_per_hop = val;
         end
@@ -74,6 +84,14 @@ classdef protocol < hgsetget
         
         function val = get.delay_time_per_hop(obj)
             val = obj.delay_time_per_hop;
+        end
+        
+        function val = get.packet_delivery_time(obj)
+           val = obj.packet_delivery_time; 
+        end
+        
+        function val = get.number_hops(obj)
+           val = obj.number_hops; 
         end
         
         function val = get.packet_delivery_success_ratio(obj)

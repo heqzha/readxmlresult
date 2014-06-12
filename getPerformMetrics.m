@@ -1,6 +1,7 @@
-function [ delay_time_per_hop, packet_delivery_success_ratio, packet_delivery_efficiency, std_delay_time_per_hop ] = getPerformMetrics( protocol, accept_delay_time)
+function [ packet_delivery_time, number_hops, delay_time_per_hop, packet_delivery_success_ratio, packet_delivery_efficiency, std_delay_time_per_hop ] = getPerformMetrics( protocol, accept_delay_time)
 %GETPERFORMMETRICS Summary of this function goes here
 %   Detailed explanation goes here
+[ packet_delivery_time, number_hops ] = getPacketDeliveryTime(protocol);
 delay_time_per_hop = averDelayTimePerHop(protocol);
 packet_delivery_success_ratio = averPacketDeliverySuccessRatio(protocol);
 
