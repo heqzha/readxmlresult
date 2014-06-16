@@ -7,7 +7,7 @@ classdef protocol < hgsetget
         packet_delivery_time
         number_hops
         delay_time_per_hop
-        packet_delivery_success_ratio
+        packet_delivery_ratio
         packet_delivery_efficiency
         std_delay_time_per_hop
     end
@@ -20,7 +20,7 @@ classdef protocol < hgsetget
     
     methods (Hidden = true)
        
-        function index = get_param_index(obj, param, array)
+        function index = get_param_index(~, param, array)
             index = 0;
             if param
                 for i = 1:length(array)
@@ -49,7 +49,7 @@ classdef protocol < hgsetget
                 case 'zor_zof_range'
                     scenario_index = 2;
                     param_index = obj.get_param_index(param, obj.zor_zof_range);
-                case 'buiding_distance'
+                case 'building_distance'
                     scenario_index = 3;
                     param_index = obj.get_param_index(param, obj.buid_distance);
                 otherwise
@@ -70,8 +70,8 @@ classdef protocol < hgsetget
             obj.delay_time_per_hop = val;
         end
         
-        function obj = set.packet_delivery_success_ratio(obj, val)
-            obj.packet_delivery_success_ratio = val;
+        function obj = set.packet_delivery_ratio(obj, val)
+            obj.packet_delivery_ratio = val;
         end
         
         function obj = set.packet_delivery_efficiency(obj, val)
@@ -94,8 +94,8 @@ classdef protocol < hgsetget
            val = obj.number_hops; 
         end
         
-        function val = get.packet_delivery_success_ratio(obj)
-            val = obj.packet_delivery_success_ratio;
+        function val = get.packet_delivery_ratio(obj)
+            val = obj.packet_delivery_ratio;
         end
         
         function val = get.packet_delivery_efficiency(obj)

@@ -115,7 +115,7 @@ switch popup_sel_index_scenario
     case 3
         scenario_name = 'Building Distance';
         scenario_unit = ' [meters]';
-        scenario_tag = 'buiding_distance';
+        scenario_tag = 'building_distance';
         scenario = global_buid_distance;
 end
 
@@ -156,15 +156,16 @@ switch popup_sel_index_performance_metrics
         %convert from seconds to milliseconds
         all_data = all_data * 1000.0;
     case 4
-        performance_metrics_name = 'Packet Delivery Success Ratio';
+        performance_metrics_name = 'Packet Delivery Ratio';
         performance_metrics_unit = ' [%]';
         for i = 1:length(global_protocols_keys)
             key = global_protocols_keys(i);
             p = global_protocols(char(key));
             [scenario_index, param_index] = p.get_scenario_index(scenario_tag, 0);
-            all_data = [all_data; p.packet_delivery_success_ratio(scenario_index,:)];
+            all_data = [all_data; p.packet_delivery_ratio(scenario_index,:)];
         end  
-        
+        %convert from seconds to %
+        all_data = all_data * 100.0;
     case 5
         performance_metrics_name = 'Packet Delivery Efficiency';
         performance_metrics_unit = ' [%]';
@@ -174,7 +175,8 @@ switch popup_sel_index_performance_metrics
             [scenario_index, param_index] = p.get_scenario_index(scenario_tag, 0);
             all_data = [all_data; p.packet_delivery_efficiency(scenario_index,:)];
         end         
-        
+        %convert from seconds to %
+        all_data = all_data * 100.0;        
     case 6
         performance_metrics_name = 'Standard Deviation of Delay Time per Hop';
         performance_metrics_unit = '';  
@@ -334,7 +336,7 @@ function popupmenu4_CreateFcn(hObject, eventdata, handles)
 if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
     set(hObject,'BackgroundColor','white');
 end
-set(hObject, 'String', {'Packet Delivery Time', 'Number of Hops','Delay Time per Hop', 'Packet Delivery Success Ratio', 'Packet Delivery Efficiency', 'Standard Deviation of Delay Time per Hop'});
+set(hObject, 'String', {'Packet Delivery Time', 'Number of Hops','Delay Time per Hop', 'Packet Delivery Ratio', 'Packet Delivery Efficiency', 'Standard Deviation of Delay Time per Hop'});
 
 
 % --- Executes on button press in pushbutton4.
@@ -365,7 +367,7 @@ for index = 1:length(pathstr)
     [ scenario_name,  scenario_param, protocol_name] = analysisPath(path);
     % Get result data.
     protocol_data = parseXML(path);
-    [ packet_delivery_time, number_hops, delay_time_per_hop, packet_delivery_success_ratio, packet_delivery_efficiency, std_delay_time_per_hop ] = getPerformMetrics( protocol_data, edit_accept_delay_time );
+    [ packet_delivery_time, number_hops, delay_time_per_hop, packet_delivery_ratio, packet_delivery_efficiency, std_delay_time_per_hop ] = getPerformMetrics( protocol_data, edit_accept_delay_time );
     
     %check data of the protocol exist or not.
     tf = isKey(global_protocols, protocol_name);
@@ -380,7 +382,7 @@ for index = 1:length(pathstr)
     packet_delivery_time_all = [];
     number_hops_all = [];
     delay_time_per_hop_all = [];
-    packet_delivery_success_ratio_all = [];
+    packet_delivery_ratio_all = [];
     packet_delivery_efficiency_all = [];
     std_delay_time_per_hop_all = [];
     if(key)
@@ -388,7 +390,7 @@ for index = 1:length(pathstr)
         packet_delivery_time_all = p.packet_delivery_time;
         number_hops_all = p.number_hops;
         delay_time_per_hop_all = p.delay_time_per_hop;
-        packet_delivery_success_ratio_all = p.packet_delivery_success_ratio;
+        packet_delivery_ratio_all = p.packet_delivery_ratio;
         packet_delivery_efficiency_all = p.packet_delivery_efficiency;
         std_delay_time_per_hop_all = p.std_delay_time_per_hop;
     else
@@ -402,14 +404,14 @@ for index = 1:length(pathstr)
     packet_delivery_time_all(scenario_index, param_index) = packet_delivery_time;
     number_hops_all(scenario_index, param_index) = number_hops;
     delay_time_per_hop_all(scenario_index, param_index) = delay_time_per_hop;
-    packet_delivery_success_ratio_all(scenario_index, param_index) = packet_delivery_success_ratio;
+    packet_delivery_ratio_all(scenario_index, param_index) = packet_delivery_ratio;
     packet_delivery_efficiency_all(scenario_index, param_index) = packet_delivery_efficiency;
     std_delay_time_per_hop_all(scenario_index, param_index) = std_delay_time_per_hop;    
     
     p.packet_delivery_time = packet_delivery_time_all;
     p.number_hops = number_hops_all;
     p.delay_time_per_hop = delay_time_per_hop_all;
-    p.packet_delivery_success_ratio = packet_delivery_success_ratio_all;
+    p.packet_delivery_ratio = packet_delivery_ratio_all;
     p.packet_delivery_efficiency = packet_delivery_efficiency_all;
     p.std_delay_time_per_hop = std_delay_time_per_hop_all;
 
