@@ -10,6 +10,7 @@ classdef protocol < hgsetget
         packet_delivery_ratio
         packet_delivery_efficiency
         std_delay_time_per_hop
+        std_packet_delivery_time
     end
     
     properties (Access = private)
@@ -82,6 +83,10 @@ classdef protocol < hgsetget
             obj.std_delay_time_per_hop = val;
         end
         
+        function obj = set.std_packet_delivery_time(obj, val)
+            obj.std_packet_delivery_time = val;
+        end
+        
         function val = get.delay_time_per_hop(obj)
             val = obj.delay_time_per_hop;
         end
@@ -105,6 +110,10 @@ classdef protocol < hgsetget
         function val = get.std_delay_time_per_hop(obj)
             val = obj.std_delay_time_per_hop;
         end        
+        
+        function val = get.std_packet_delivery_time(obj)
+            val = obj.std_packet_delivery_time;
+        end
 
     end
     
