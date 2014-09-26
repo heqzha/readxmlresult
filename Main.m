@@ -108,7 +108,7 @@ switch popup_sel_index_scenario
         scenario_tag = 'vehicle_density';
         scenario = global_vehi_density;
     case 2
-        scenario_name = 'ZOR/ZOF Range';
+        scenario_name = 'Length of ZOR/ZOF';
         scenario_unit = ' [meters]';
         scenario_tag = 'zor_zof_range';
         scenario = global_zor_zof_range;
@@ -186,6 +186,16 @@ switch popup_sel_index_performance_metrics
             [scenario_index, param_index] = p.get_scenario_index(scenario_tag, 0);
             all_data = [all_data; p.std_delay_time_per_hop(scenario_index,:)];            
         end       
+        
+    case 7
+        performance_metrics_name = 'Standard Deviation of Packet Delivery Time';
+        performance_metrics_unit = '';  
+        for i = 1:length(global_protocols_keys)
+            key = global_protocols_keys(i);
+            p = global_protocols(char(key));
+            [scenario_index, param_index] = p.get_scenario_index(scenario_tag, 0);
+            all_data = [all_data; p.std_packet_delivery_time(scenario_index,:)];            
+        end           
 end
 show(global_protocols_keys, performance_metrics_name, performance_metrics_unit, scenario_name, scenario_unit, scenario, all_data);
 
@@ -336,7 +346,7 @@ function popupmenu4_CreateFcn(hObject, eventdata, handles)
 if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
     set(hObject,'BackgroundColor','white');
 end
-set(hObject, 'String', {'Packet Delivery Time', 'Number of Hops','Delay Time per Hop', 'Packet Delivery Ratio', 'Packet Delivery Efficiency', 'Standard Deviation of Delay Time per Hop'});
+set(hObject, 'String', {'Packet Delivery Time', 'Number of Hops','Delay Time per Hop', 'Packet Delivery Ratio', 'Packet Delivery Efficiency', 'Standard Deviation of Delay Time per Hop', 'Standard Deviation of Packet Delivery Time'});
 
 
 % --- Executes on button press in pushbutton4.
@@ -367,7 +377,7 @@ for index = 1:length(pathstr)
     [ scenario_name,  scenario_param, protocol_name] = analysisPath(path);
     % Get result data.
     protocol_data = parseXML(path);
-    [ packet_delivery_time, number_hops, delay_time_per_hop, packet_delivery_ratio, packet_delivery_efficiency, std_delay_time_per_hop ] = getPerformMetrics( protocol_data, edit_accept_delay_time );
+    [ packet_delivery_time, number_hops, delay_time_per_hop, packet_delivery_ratio, packet_delivery_efficiency, std_delay_time_per_hop, std_packet_delivery_time ] = getPerformMetrics( protocol_data, edit_accept_delay_time );
     
     %check data of the protocol exist or not.
     tf = isKey(global_protocols, protocol_name);
@@ -385,6 +395,7 @@ for index = 1:length(pathstr)
     packet_delivery_ratio_all = [];
     packet_delivery_efficiency_all = [];
     std_delay_time_per_hop_all = [];
+    std_packet_delivery_time_all = [];
     if(key)
         p = global_protocols(protocol_name);
         packet_delivery_time_all = p.packet_delivery_time;
@@ -393,6 +404,7 @@ for index = 1:length(pathstr)
         packet_delivery_ratio_all = p.packet_delivery_ratio;
         packet_delivery_efficiency_all = p.packet_delivery_efficiency;
         std_delay_time_per_hop_all = p.std_delay_time_per_hop;
+        std_packet_delivery_time_all = p.std_packet_delivery_time;
     else
         p = protocol(protocol_name, global_vehi_density, global_zor_zof_range, global_buid_distance);
         global_protocols(protocol_name) = p;
@@ -407,6 +419,7 @@ for index = 1:length(pathstr)
     packet_delivery_ratio_all(scenario_index, param_index) = packet_delivery_ratio;
     packet_delivery_efficiency_all(scenario_index, param_index) = packet_delivery_efficiency;
     std_delay_time_per_hop_all(scenario_index, param_index) = std_delay_time_per_hop;    
+    std_packet_delivery_time_all(scenario_index, param_index) = std_packet_delivery_time;
     
     p.packet_delivery_time = packet_delivery_time_all;
     p.number_hops = number_hops_all;
@@ -414,6 +427,7 @@ for index = 1:length(pathstr)
     p.packet_delivery_ratio = packet_delivery_ratio_all;
     p.packet_delivery_efficiency = packet_delivery_efficiency_all;
     p.std_delay_time_per_hop = std_delay_time_per_hop_all;
+    p.std_packet_delivery_time = std_packet_delivery_time_all;
 
     global_protocols(protocol_name) = p;
 end
